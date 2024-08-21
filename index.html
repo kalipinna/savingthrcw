@@ -662,7 +662,6 @@ sidebar:has(input:checked + label[for='opla']) ~ section filter:not([opla]),
 
 sidebar:has(input:checked + label[for='ouat']) ~ section filter:not([ouat]),
 sidebar:has(input:checked + label[for='merlin']) ~ section filter:not([merlin]),
-sidebar:has(input:checked + label[for='everything']) ~ section filter:not([everything]),
 sidebar:has(input:checked + label[for='modern']) ~ section filter:not([modern]),
 
 sidebar:has(input:checked + label[for='fm']) ~ section filter:not([fm]),
@@ -724,18 +723,19 @@ sidebar:has(input:checked + label[for='canonFallout']) ~ section filter:not([can
 
 <!--                                 THE FILTERS START HERE!!!! 
 The ID (id="") needs to be the same as the for="" in the label. 
-Make sure the name="" of the same batch is the same. For example: everything under the age section has name="age" in it. -->                     <!--                                 FILTER CATEGORY 1 STARTS HERE -->                     <div class="filter"><p>status</p><div class="filter_links" id="five">                                                                         <!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                     <input type="radio" id="allstatus" name="status" checked> <label for="allstatus">all</label>                                                                <input type="radio" id="primary" name="status"><label for="primary">primary</label>                                                                <input type="radio" id="secondary" name="status"><label for="secondary">secondary</label>                                                                <input type="radio" id="lowactivity" name="status"> <label for="lowactivity">low activity</label>                                                                <input type="radio" id="test" name="status"> <label for="test">test</label>                                                                </div></div><!--                                 FILTER CATEGORY 1 ENDS HERE -->                 
-
-<!--                                 FILTER CATEGORY 2 STARTS HERE -->                     <div class="filter"><p>Type:</p><div class="filter_links" id="five"> <!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                     <input type="radio" id="allage" name="age" checked> <label for="allage">all</label>                                                                <input type="radio" id="canondiv" name="age"><label for="canondiv">canon div</label>                                                                <input type="radio" id="oc" name="age"><label for="oc">oc</label>                                                                <input type="radio" id="au" name="age"> <label for="au">au</label>      
-<br><br>
-*canon div: I changed something about the character's portrayal.<br>
-AU: I changed some fundamental aspects of canon that alters everything</div></div>
-
-
-<!-- FILTER CATEGORY 2 ENDS HERE -->                  
+Make sure the name="" of the same batch is the same. For example: everything under the age section has name="age" in it. -->                     <!--                                 FILTER CATEGORY 1 STARTS HERE -->                     <div class="filter"><p>status</p><div class="filter_links" id="five">                                                                         <!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                     <input type="radio" id="allstatus" name="status" checked> <label for="allstatus">all</label>                                                              
+<input type="radio" id="primary" name="status"><label for="primary">primary</label>                                                             
+<input type="radio" id="secondary" name="status"><label for="secondary">secondary</label>                                                         
+<input type="radio" id="lowactivity" name="status"> <label for="lowactivity">low activity</label>                                                      
+<input type="radio" id="test" name="status"> <label for="test">test</label>                                                                </div></div>
 
 
-<!--                                 FILTER CATEGORY 3 STARTS HERE -->           <div class="filter">
+<!--                                 FILTER CATEGORY 1 ENDS HERE -->                 
+
+
+
+
+<!--                                 FILTER CATEGORY 2 STARTS HERE -->           <div class="filter">
 <p>Crossovers:</p>
 <div class="filter_links" id="five"> <!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                    
 <input type="radio" id="allcros" name="cros" checked> 
@@ -746,30 +746,13 @@ AU: I changed some fundamental aspects of canon that alters everything</div></di
 <label for="nocros">no</label>                                                    <input type="radio" id="maybecros" name="cros"> 
 <label for="maybecros">maybe</label>     
 </div></div>
-<!--                         FILTER CATEGORY 3 ENDS HERE -->      
+<!--                         FILTER CATEGORY 2 ENDS HERE -->      
 
 
-
-<!--                                 FILTER CATEGORY 4 STARTS HERE -->                     <div class="filter"><p>Originally from:</p><div class="filter_links" id="five">                                                                        <input type="radio" id="allfandom" name="fandom" checked> <label for="allfandom">all</label>           
-
-<input type="radio" id="canonbaldursgate" name="fandom"> <label for="canonbaldursgate">BG3</label>                                                           
-
-<input type="radio" id="canonBridgerton" name="fandom"> <label for="canonBridgerton">Bridgerton</label>                                                           
-<input type="radio" id="canonChuck" name="fandom"> <label for="canonChuck">Chuck</label>                                                                            <input type="radio" id="canonDoctorWho" name="fandom"> <label for="canonDoctorWho">Doctor Who</label>                                                                <input type="radio" id="canonDragonAge" name="fandom"> <label for="canonDragonAge">Dragon Age</label>                                                            
-<input type="radio" id="canonFallout" name="fandom"> <label for="canonFallout">Fallout</label>              
-<input type="radio" id="canonFirefly" name="fandom"> <label for="canonFirefly">Firefly</label>   
-<input type="radio" id="nofandom" name="fandom"> <label for="nofandom">fandomless</label>                        
-<input type="radio" id="canonFFVI" name="fandom"> <label for="canonFFVI">FFVI</label>          
-<input type="radio" id="canonLost" name="fandom"><label for="canonLost">Lost</label>    
-<input type="radio" id="canonLotR" name="fandom"> <label for="canonLotR">LotR</label>                                   
-<input type="radio" id="canonMarvel" name="fandom"> <label for="canonMarvel">Marvel</label>                                               
-
-<input type="radio" id="canonopla" name="fandom"> <label for="canonopla">LA ONEPIECE</label>                                               
-<input type="radio" id="canontheHundred" name="fandom"> <label for="canontheHundred">the 100</label>                                                                </div></div><!--                                 FILTER CATEGORY 4 ENDS HERE -->                  
+       
 
 
-<!--                                 FILTER CATEGORY 5 STARTS HERE -->                     <div class="filter"><p>Open to these fandoms:</p><div class="filter_links" id="five"><input type="radio" id="allgender" name="gender" checked> <label for="allgender">all</label>                 
-<input type="radio" id="everything" name="gender"> <label for="everything">everything</label>                                
+<!--                                 FILTER CATEGORY 3 STARTS HERE -->                     <div class="filter"><p>Open to these fandoms:</p><div class="filter_links" id="five"><input type="radio" id="allgender" name="gender" checked> <label for="allgender">all</label>                 
 <input type="radio" id="baldursgate" name="gender"> <label for="baldursgate">bg3</label>                                                               
 
 <input type="radio" id="bridgerton" name="gender"> <label for="bridgerton">bridgerton</label>                                                     
@@ -792,11 +775,21 @@ AU: I changed some fundamental aspects of canon that alters everything</div></di
 <input type="radio" id="ouat" name="gender"> <label for="ouat">ouat</label>                                                    
 <input type="radio" id="theHundred" name="gender"> <label for="theHundred">the 100</label>                                                                <input type="radio" id="dc" name="gender"> <label for="dc">dc</label>                                                                
 <input type="radio" id="therookie" name="gender"> <label for="therookie">the Rookie</label>                                                              
-<input type="radio" id="thewitcher" name="gender"> <label for="thewitcher">the witcher</label>                                                                <input type="radio" id="turn" name="gender"> <label for="turn">TURN AWS</label>                                                                                             </div></div><!--                                 FILTER CATEGORY 5 ENDS HERE -->                 
+<input type="radio" id="thewitcher" name="gender"> <label for="thewitcher">the witcher</label>                                                                <input type="radio" id="turn" name="gender"> <label for="turn">TURN AWS</label>                                                                                             </div></div><!--                                 FILTER CATEGORY 3 ENDS HERE -->                 
 
 
 
-<!--                                 FILTER CATEGORY 3 STARTS HERE -->           <div class="filter">
+
+<!--                                 FILTER CATEGORY 4 STARTS HERE -->                     <div class="filter"><p>Type:</p><div class="filter_links" id="five"> <!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                     <input type="radio" id="allage" name="age" checked> <label for="allage">all</label>                                                                <input type="radio" id="canondiv" name="age"><label for="canondiv">canon div</label>                                                                <input type="radio" id="oc" name="age"><label for="oc">oc</label>                                                                <input type="radio" id="au" name="age"> <label for="au">au</label>      
+<br><br>
+*canon div: I changed something about the character's portrayal.<br>
+AU: I changed some fundamental aspects of canon that alters everything</div></div>
+
+
+<!-- FILTER CATEGORY 4 ENDS HERE -->                  
+
+
+<!--                                 FILTER CATEGORY 5 STARTS HERE -->           <div class="filter">
 <p>Open to ships*:</p>
 <div class="filter_links" id="five"> <!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                    
 <input type="radio" id="allship" name="ship" checked><label for="allship">all</label>  
@@ -812,7 +805,7 @@ AU: I changed some fundamental aspects of canon that alters everything</div></di
     
 </div>
 
-<!--                         FILTER CATEGORY 3 ENDS HERE -->      
+<!--                         FILTER CATEGORY 5 ENDS HERE -->      
 
 
 
@@ -982,14 +975,7 @@ Game still in progress, on act 3. I started following people because thanks to m
 
 
 
-    
-
-
-<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                     
-<filter color2 primary oc yescros canonBridgerton opla everything bridgerton marvel dragonage baldursgate historical lost chuck fallout modern firefly doctorwho turn fm> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/d0dff368bfadee3a9f7575a079c7bee5/ffe0a15e02046593-e6/s400x600/d42c272aee81904bc387cb04af1d42c276ddaee4.pnj">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://www.tumblr.com/blog/lcdybonbon"></a> <!--                                 If you want no link delete this -->                     <div class="name">Bonnie <p>Gillanders</p></div><div class="age">24</div><div class="gender">Bridgerton <p>oc</p></div><div class="traits"><span>open to canon, canon div. and oc characters  </span></div><div class="description"><b>Wanted interactions</b>: </<b>moved to @lcdybonbon</b>  tvshow!Bridgerton (also Ben's book) and muses who can crossover. Historical fandoms that don't require realism. Fallout, Firefly, One Piece LA and pre-timeskip manga, Chuck, Lost, Marvel (selectively) and any modern fandoms I know. (for Doctor Who she'd have a different fc)
-<br><b>Open to ship with:</b> men, chemistry-based but they can't try to make her be more serious.
-</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                           
-
+     
 
 
 
