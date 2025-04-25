@@ -1,1697 +1,1200 @@
-<!-- pastel v.1 by ellie/retrcmoon // RULES
-                                                                                                                                                                                                                                                             ->Do NOT remove any credits! ->Do NOT use this as a base code. ->Do NOT take parts of this code an claim it as your own. ->You are free to edit however you want. // INFO
-                                                                                                                                                                                                                                                             ->The muse profile pictures are 160 x 160. They will resize automatically. ->To add more muses you need to copy from "Muse box starts here" to Muse Box ends here".
- ->If you want to edit the links in the topbar look for: HEADER START ->If you want to edit the filtes in the sidebar look for: THE FILTERS START HERE ->If you want to add more muse boxes look for: MUSES GO HERE // CREDITS
-                                                                                                                                                                                                                                                             ->Fonts by https: //fonts.google.com
-                                                                                                                                                                                                                                                             ->Icons by https: //fontawesome.com/v4/icons/ & https://linearicons.com/free
-                                                                                                                                                                                                                                                             ->Helpful website: https: //www.w3schools.com/
-                                                                                                                                                                                                                                                             ->Helpful color code picker: https: //0to255.com/
-                                                                                                                                                                                                                                                             ->Aria-Label code: https: //codepen.io/jacmaes/pen/oNKvrp
-                                                                                                                                                                                                                                                             ->Filters by retrcmoon & egg.design ->Inspiration: https: //www.pinterest.de/pin/3799980928720327/
-                                                                                                                                                                                                                                                             // FILTERS
-                                                                                                                                                                                                                                                             ->The filter part needs to be edited on three places in the code if you add/change them. Everything is written in the code. ->Make sure you don't use numbers, spaces or symbols as filter id / label for.
- ->The filter ids in the input need to match with the label for. ->Helpful comments on how to edit the filters can also be found in the code. ->For further help refer to the tutorial: https: //retrcmoon.tumblr.com/tutorial/filter
-                                                                                                                                                                                                                                                             ->IMPORTANT!!!!!!! The filters will NOT work for the following browsers: Internet Explorer,
-                                                                                                                                                                                                                                                             Opera Mini,
-                                                                                                                                                                                                                                                             UC Browser for Android,
-                                                                                                                                                                                                                                                             Firefox for Android,
-                                                                                                                                                                                                                                                             QQ Browser,
-                                                                                                                                                                                                                                                             Baidu Browser,
-                                                                                                                                                                                                                                                             KaiOS Browser -->
+<!--                                
+   pastel v.1 by ellie/retrcmoon
+
+// RULES
+-> Do NOT remove any credits!
+-> Do NOT use this as a base code.
+-> Do NOT take parts of this code an claim it as your own.
+-> You are free to edit however you want.
+
+
+// INFO
+-> The muse profile pictures are 160 x 160. They will resize automatically.
+-> To add more muses you need to copy from "Muse box starts here" to Muse Box ends here".
+
+-> If you want to edit the links in the topbar look for: HEADER START
+-> If you want to edit the filtes in the sidebar look for: THE FILTERS START HERE
+-> If you want to add more muse boxes look for: MUSES GO HERE
+
+
+// CREDITS
+-> Fonts by https://fonts.google.com
+-> Icons by https://fontawesome.com/v4/icons/ & https://linearicons.com/free
+-> Helpful website: https://www.w3schools.com/
+-> Helpful color code picker: https://0to255.com/
+-> Aria-Label code: https://codepen.io/jacmaes/pen/oNKvrp
+-> Filters by retrcmoon & egg.design
+-> Inspiration: https://www.pinterest.de/pin/3799980928720327/
+
+
+// FILTERS
+-> The filter part needs to be edited on three places in the code if you add/change them. Everything is written in the code.
+-> Make sure you don't use numbers, spaces or symbols as filter id / label for.
+-> The filter ids in the input need to match with the label for.
+-> Helpful comments on how to edit the filters can also be found in the code.
+
+-> For further help refer to the tutorial: https://retrcmoon.tumblr.com/tutorial/filter
+
+
+-> IMPORTANT!!!!!!! 
+    The filters will NOT work for the following browsers:
+    Internet Explorer, Opera Mini, UC Browser for Android, Firefox for Android, QQ Browser, Baidu Browser, KaiOS Browser
+
+
+-->                     
+
+
 <!DOCTYPE html>
 <html>
-
 <head>
-  <link rel="icon" type="image/png" href="{Favicon}">
-  <link rel="alternate" type="application/rss+xml" href="{RSS}" />
-  <title>muse page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <style>
-    /*--  CHANGE THE DESIGN DETAILS HERE ONLY!!! --*/
-    
-     :root {
-      /*--- DESIGN OPTIONS ---*/
-      --pic-filter: 0%;
-      /*CHANGE TO 0% IF YOU WANT NO GREYFILTER*/
-      --tumblr-controls: 100%;
-      /*CHANGE TO 0% FOR WHITE TUMBLR CONTROLS*/
-      --shadow: 0.1;
-      /*CHANGE TO 0 FOR NO SHADOW EFFECTS*/
-      --bg-pattern-opacity: 0.2;
-      /*CHANGE TO 0 IF YOU WANT NO BACKGROUND PATTERN*/
-      /*--- GENRAL COLORS ---*/
-      --background: #ebebeb;
-      --header-background: #ebebeb;
-      --header-links: #444;
-      --border: #a0a0a0;
-      --text: #444;
-      --accent: #faf287;
-      --bold: #dfd009;
-      /*--- SIDEBAR ---*/
-      --sidebar-background: #ebebeb;
-      --buttons-bg: #f3f3f3;
-      --quote: 'canon divergent muses';
-      --blogname: '@savingthrwc';
-      --icon: url("https://64.media.tumblr.com/b6dc8f0b066cf68380e7408203c19b19/fc06d0a3ae77c7ad-9d/s540x810/744f6439fc2a4f7249dd850aa5053c68d62e9cbc.jpg");
-      /*--- CUSTOM ACCENT COLORS ---*/
-      --one: #FFC0CB;
-      --two: #fffbbc;
-      --three: #89cff0;
-      --four: #ab85f5;
-      --five: #79edb6;
-      /*--- MUSE BOX DESIGN OPTIONS ---*/
-      --text-align: left;
-      /*CHANGE TO LEFT IF YOU DONT WANT THE SPACES IN THE DESCRIPTION MUSE BOX */
-    }
-    /** CREDIT DO NOT DELETE **/
-    
-    #credit {
-      position: fixed;
-      bottom: 15px;
-      right: 15px;
-      width: 15px;
-      height: 15px;
-      overflow: hidden;
-      z-index: 9999999999999999;
-      border: 1px solid var(--border);
-      padding: 10px;
-      transition: all 0.5s;
-      background: var(--background);
-    }
-    
-    #credit:hover {
-      background: var(--accent);
-    }
-    
-    #credit a,
-    #credit i {
-      color: var(--text);
-      font-weight: 900;
-      line-height: 15px;
-      font-size: 15px;
-      margin-left: -0.5px;
-      z-index: 9999999999999999999;
-      text-align: center;
-    }
-    /** SCROLLBAR **/
-    
-     ::-webkit-scrollbar {
-      width: 4px;
-      height: 6px;
-    }
-    
-     ::-webkit-scrollbar-track {
-      width: 2px;
-      background-color: transparent!;
-      border: 0px solid var(--border);
-    }
-    
-     ::-webkit-scrollbar-thumb {
-      background: var(--border);
-      border: 1px solid var(--border);
-    }
-    
-    .description::-webkit-scrollbar {
-      width: 0px;
-      height: 3px;
-    }
-    
-    sidebar::-webkit-scrollbar {
-      width: 1px;
-      height: 4px;
-    }
-    /** BODY **/
-    
-    .tmblr-iframe--unified-controls {
-      transform: scale(0.6, 0.6);
-      transform-origin: top right;
-      z-index: 99999999999999999999999999999999999999999;
-      filter: invert(var(--tumblr-controls));
-      -webkit-filter: invert(var(--tumblr-controls));
-    }
-    
-    body {
-      background-color: var(--background);
-      font-family: 'Karla', sans-serif;
-      color: var(--text);
-      font-size: 11px;
-      overflow: hidden;
-    }
-    
-    body:before {
-      content: '';
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0px;
-      left: 0px;
-      --dot-size: 2px;
-      --dot-space: 24px;
-      background: linear-gradient(90deg, var(--background) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), linear-gradient(var(--background) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), var(--border);
-      opacity: var(--bg-pattern-opacity);
-    }
-    
-    a {
-      text-decoration: none;
-      font-weight: 800;
-      color: var(--accent);
-      text-transform: lowercase;
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -ms-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s;
-    }
-    
-    b,
-    strong {
-      color: var(--bold);
-      font-family: 'Manrope';
-      font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-    
-    i {
-      color: var(--accent);
-      font-weight: 600;
-    }
-    
-    mark,
-    .information blogname {
-      color: var(--text);
-      background-color: var(--buttons-bg);
-      padding: 3px 5px;
-      border-radius: 5px;
-    }
-    
-     ::selection {
-      color: var(--text);
-      background-color: var(--accent);
-    }
-    
-    [aria-label]:after {
-      content: attr(aria-label);
-      opacity: 0;
-      position: absolute;
-      top: 110%;
-      left: 10px;
-      z-index: 5000;
-      pointer-events: none;
-      padding: 8px 10px;
-      line-height: 15px;
-      white-space: nowrap;
-      text-decoration: none;
-      text-indent: 0;
-      overflow: visible;
-      font-size: 9px;
-      font-weight: 700;
-      font-family: 'Manrope';
-      text-transform: uppercase;
-      color: var(--text);
-      background-color: var(--background);
-      border-left: 6px solid var(--border);
-      border-radius: 2px;
-      box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -ms-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s;
-    }
-    
-    [aria-label]:hover:after,
-    [aria-label]:focus:after {
-      opacity: .9;
-    }
-    /** CONTAINER **/
-    
-    section {
-      position: absolute;
-      overflow: auto;
-      width: calc(100% - 310px);
-      height: calc(100% - 50px);
-      right: 0px;
-      bottom: 0px;
-      padding: 0px;
-      z-index: 1;
-    }
-    
-    .filters-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-content: flex-start;
-    }
-    
-    .filters-container>div {
-      display: flex;
-    }
-    /** HEADER **/
-    
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 40px;
-      border-bottom: 1px solid var(--border);
-      z-index: 99;
-      background: var(--header-background);
-    }
-    
-    header span {
-      position: absolute;
-      margin-left: 15px;
-      margin-top: 5px;
-      font-size: 25px;
-      font-weight: 900;
-      color: var(--header-links);
-      transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-    }
-    
-    .links {
-      position: absolute;
-      margin-left: 50px;
-      margin-top: 6px;
-      width: 50%;
-      height: 35px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    
-    .links a {
-      position: relative;
-      display: inline-block;
-      height: 20px;
-      padding: 6px;
-      text-align: center;
-      color: var(--header-links);
-      text-transform: uppercase;
-      font-size: 13px;
-      font-family: 'Manrope';
-      font-weight: 500;
-      line-height: 15px;
-    }
-    
-    .links a::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 140%;
-      height: 3px;
-      bottom: 0;
-      left: -20%;
-      background-color: var(--header-links);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    
-    .links a:hover::before {
-      transform: scaleX(1);
-    }
-    /** SIDEBAR **/
-    
-    sidebar {
-      position: fixed;
-      z-index: 9;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 100%;
-      border-right: 1px solid var(--border);
-      background: var(--sidebar-background);
-      overflow-y: auto;
-      overflow-x: hidden;
-      -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, var(--shadow));
-      -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, var(--shadow));
-      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, var(--shadow));
-    }
-    
-    .information {
-      position: absolute;
-      margin-top: 40px;
-      margin-left: 0px;
-      width: 300px;
-      height: 130px;
-      border-bottom: 1px solid var(--border);
-      z-index: 999999;
-    }
-    
-    .information img {
-      content: var(--icon);
-      position: absolute;
-      margin-top: 35px;
-      border-radius: 50%;
-      margin-left: 17px;
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      padding: 3px;
-      border: 1px solid var(--border);
-    }
-    
-    .information circle {
-      display: inline-block;
-      margin-top: 100px;
-      margin-left: 10px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--sidebar-background);
-      border: 1px solid var(--border);
-    }
-    
-    .information circle:first-of-type {
-      margin-left: 120px;
-    }
-    
-    .information circle:nth-of-type(even) {
-      background: var(--border);
-    }
-    
-    .information quote {
-      position: absolute;
-      font-family: 'Manrope';
-      margin-top: 45px;
-      margin-left: 90px;
-      font-size: 14px;
-      font-weight: 900;
-      line-height: 17px;
-      width: 170px;
-      text-transform: uppercase;
-      text-align: right;
-    }
-    
-    .information quote::before {
-      content: var(--quote);
-    }
-    
-    .information blogname {
-      position: absolute;
-      margin-top: 65px;
-      margin-left: 95px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    
-    .information blogname::before {
-      content: var(--blogname);
-    }
-    /** MUSES **/
-    
-    muse {
-      width: 350px;
-      /*340*/
-      height: 300px;
-      /** 240 **/
-      background-color: var(--background);
-      margin: 5px 10px 5px 5px;
-      display: inline-block;
-      border: 1px solid var(--border);
-      padding: 5px 6px;
-      border-radius: 20px;
-      -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, var(--shadow));
-      -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, var(--shadow));
-      box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, var(--shadow));
-    }
-    
-    muse img {
-      position: absolute;
-      margin-top: 0px;
-      margin-left: 0px;
-      width: 170px;
-      /*160*/
-      height: 230px;
-      /** 160 **/
-      object-fit: cover;
-      filter: grayscale(var(--pic-filter));
-      -webkit-filter: grayscale(var(--pic-filter));
-      -moz-filter: grayscale(var(--pic-filter));
-      opacity: 100%;
-      border: 1px solid var(--border);
-      border-bottom: none;
-      border-radius: 16px 0px 0px 0px;
-    }
-    
-    muse a {
-      position: absolute;
-      background: var(--accent);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      margin-top: -12px;
-      margin-left: -18px;
-      border: 8px solid var(--background);
-    }
-    
-    muse a::before {
-      content: '●';
-      color: var(--background);
-      font-size: 50px;
-      margin-left: 4.5px;
-      line-height: 35px;
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -ms-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s;
-    }
-    
-    muse a:hover:before {
-      color: var(--accent);
-    }
-    
-    .name {
-      position: absolute;
-      margin-top: 2px;
-      margin-left: 175px;
-      /*165*/
-      width: 170px;
-      height: 60px;
-      font-family: 'Manrope';
-      font-size: 33px;
-      text-transform: uppercase;
-      font-weight: 500;
-      letter-spacing: -0.5px;
-      line-height: 25px;
-    }
-    
-    .name p {
-      margin-top: 2px;
-      font-weight: 500;
-      font-size: 23px;
-    }
-    
-    .name:first-letter {
-      color: var(--accent);
-      font-style: bold;
-      font-weight: 900;
-      font-size: 35px;
-    }
-    
-    .age,
-    .gender {
-      position: absolute;
-      margin-top: 231px;
-      /** 161 **/
-      margin-left: 0px;
-      width: 85px;
-      /*70*/
-      height: 66px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--accent);
-      text-align: center;
-      font-family: 'Bebas Neue';
-      font-size: 28px;
-      font-weight: 500;
-      line-height: 66px;
-      /*76*/
-      z-index: 2;
-    }
-    
-    .age {
-      border-radius: 0px 0px 0px 16px;
-    }
-    
-    .gender {
-      margin-left: 86px;
-      /*91*/
-      background: var(--background);
-      font-size: 16px;
-      line-height: 55px;
-      /*65 */
-      border-left: none;
-      z-index: 0;
-    }
-    
-    .gender p {
-      font-size: 12px;
-      margin-top: -38px;
-    }
-    /* -48 */
-    
-    .traits {
-      position: absolute;
-      border: 1px solid var(--border);
-      border-left: none;
-      height: 40px;
-      width: 177px;
-      margin-top: 60px;
-      margin-left: 172px;
-      /*162*/
-      text-align: center;
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-      flex-wrap: nowrap;
-      background: var(--accent);
-      font-size: 11px;
-    }
-    
-    .traits span {
-      line-height: 15px;
-      padding-top: 5px;
-      flex: 1;
-      border-right: 1px solid var(--border);
-    }
-    
-    .traits span:last-of-type {
-      border-right: none;
-    }
-    
-    .description {
-      position: absolute;
-      margin-top: 101px;
-      margin-left: 172px;
-      /*162*/
-      height: 186px;
-      /** 136 **/
-      width: 167px;
-      border: 1px solid var(--border);
-      border-left: none;
-      border-radius: 0px 0px 16px 0px;
-      padding: 5px;
-      overflow: auto;
-      text-align: var(--text-align);
-      font-size: 13px;
-    }
-    /** COLOR VARAIBLES **/
-    
-    filter[color1] .age,
-    filter[color1] .traits,
-    filter[color1] a {
-      background: var(--one);
-    }
-    
-    filter[color1] .name:first-letter,
-    filter[color1] a:hover:before,
-    filter[color1] i,
-    filter[color1] b {
-      color: #bd6574;
-    }
-    
-    filter[color2] .age,
-    filter[color2] .traits,
-    filter[color2] a {
-      background: var(--two);
-    }
-    
-    filter[color2] .name:first-letter,
-    filter[color2] a:hover:before,
-    filter[color2] b,
-    filter[color2] i {
-      color: #a09721;
-    }
-    
-    filter[color3] .age,
-    filter[color3] .traits,
-    filter[color3] a {
-      background: var(--three);
-    }
-    
-    filter[color3] .name:first-letter,
-    filter[color3] a:hover:before,
-    filter[color3] i,
-    filter[color3] b {
-      color: #4b9cc2;
-    }
-    
-    filter[color4] .age,
-    filter[color4] .traits,
-    filter[color4] a {
-      background: var(--four);
-    }
-    
-    filter[color4] .name:first-letter,
-    filter[color4] a:hover:before,
-    filter[color4] i,
-    filter[color4] b {
-      color: #695395;
-    }
-    
-    filter[color5] .age,
-    filter[color5] .traits,
-    filter[color5] a {
-      background: var(--five);
-    }
-    
-    filter[color5] .name:first-letter,
-    filter[color5] a:hover:before,
-    filter[color5] i,
-    filter[color5] b {
-      color: #175537;
-    }
-    /** FILTERS **/
-    
-    .filter {
-      position: relative;
-      width: 300px;
-      min-height: 100px;
-      margin-bottom: 20px;
-      margin-left: 0px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-      padding-bottom: 20px;
-    }
-    
-    .filtercontainer {
-      position: absolute;
-      margin-top: 190px;
-    }
-    
-    .filter p {
-      margin-top: 0px;
-      font-family: 'Manrope';
-      font-size: 23px;
-      font-variant: small-caps;
-      font-weight: 700;
-      margin-bottom: 12px;
-      text-align: center;
-      letter-spacing: 1px;
-      color: var(--text);
-    }
-    
-    .filter_links {
-      margin-left: 15px;
-      width: 275px;
-    }
-    
-    label,
-    input {
-      cursor: pointer;
-      width: 80px;
-      padding: 5px;
-      height: 20px;
-      margin-right: 5px;
-      margin-bottom: 5px;
-      background: var(--buttons-bg);
-      border-radius: 10px;
-      display: inline-block;
-      border: 1px solid var(--border);
-      font-weight: 600;
-      text-align: center;
-      color: var(--text);
-      text-transform: uppercase;
-      font-size: 11px;
-      font-family: 'Manrope';
-      line-height: 20px;
-      transition: all .7s ease;
-      -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, var(--shadow));
-      -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, var(--shadow));
-      box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, var(--shadow));
-    }
-    
-    input:checked+label,
-    label:hover {
-      background: var(--accent);
-      color: var(--text);
-      border: 1px solid var(--accent);
-    }
-    
-    #one input:checked+label,
-    #one label:hover {
-      background: var(--one);
-      color: var(--text);
-      border: 1px solid var(--one);
-    }
-    
-    #two input:checked+label,
-    #two label:hover {
-      background: var(--two);
-      color: var(--text);
-      border: 1px solid var(--two);
-    }
-    
-    #three input:checked+label,
-    #three label:hover {
-      background: var(--three);
-      color: var(--text);
-      border: 1px solid var(--three);
-    }
-    
-    #four input:checked+label,
-    #four label:hover {
-      background: var(--four);
-      color: var(--text);
-      border: 1px solid var(--four);
-    }
-    
-    #five input:checked+label,
-    #five label:hover {
-      background: var(--five);
-      color: var(--text);
-      border: 1px solid var(--five);
-    }
-    
-    input[type="radio"] {
-      display: none;
-    }
-    
-    @keyframes hideFilter {
-      50% {
-        transform: scale(0);
-        height: 100px;
-        width: 100px;
-      }
-      100% {
-        transform: scale(0);
-        width: 0;
-        height: 0;
-        margin: 0;
-      }
-    }
-    /** IMPORTANT!!! THIS NEEDS TO BE EDITED IF YOU ADD MORE/OTHER FILTERS!!!
+<link rel="icon" type="image/png" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}" />
+
+<title>muse page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+
+<style>
+
+/*--  CHANGE THE DESIGN DETAILS HERE ONLY!!! --*/
+
+
+:root {
+    
+/*--- DESIGN OPTIONS ---*/     
+    --pic-filter:   0%; /*CHANGE TO 0% IF YOU WANT NO GREYFILTER*/
+    --tumblr-controls: 100%; /*CHANGE TO 0% FOR WHITE TUMBLR CONTROLS*/
+    --shadow: 0.1; /*CHANGE TO 0 FOR NO SHADOW EFFECTS*/
+    --bg-pattern-opacity: 0.2; /*CHANGE TO 0 IF YOU WANT NO BACKGROUND PATTERN*/
+
+
+/*--- GENRAL COLORS ---*/
+    --background:       #ebebeb;
+    --header-background:#ebebeb;
+    --header-links:     #444;
+    --border:           #a0a0a0;
+    --text:             #444;
+    --accent:           #faf287;
+    --bold:             #dfd009;
+    
+    
+/*--- SIDEBAR ---*/     
+    --sidebar-background:#ebebeb;
+    --buttons-bg:       #f3f3f3;
+    --quote:        'canon divergent muses';
+    --blogname:     '@savingthrwc';
+    --icon: url("https://64.media.tumblr.com/b6dc8f0b066cf68380e7408203c19b19/fc06d0a3ae77c7ad-9d/s540x810/744f6439fc2a4f7249dd850aa5053c68d62e9cbc.jpg");
+
+
+/*--- CUSTOM ACCENT COLORS ---*/ 
+    --one:          #FFC0CB;
+    --two:          #faf287;
+    --three:        #89cff0;
+    --four:        #ab85f5;
+    --five:        #79edb6;
+
+
+/*--- MUSE BOX DESIGN OPTIONS ---*/ 
+    --text-align:   left; /*CHANGE TO LEFT IF YOU DONT WANT THE SPACES IN THE DESCRIPTION MUSE BOX */
+    
+}
+
+
+/** CREDIT DO NOT DELETE **/
+#credit { position:fixed; bottom:15px; right:15px; width:15px; height:15px; overflow:hidden; z-index:9999999999999999; border:1px solid var(--border); padding:10px; transition: all 0.5s; background:var(--background);} #credit:hover { background:var(--accent);}
+#credit a, #credit i { color:var(--text); font-weight:900; line-height:15px; font-size:15px; margin-left:-0.5px; z-index:9999999999999999999;text-align:center;} 
+
+/** SCROLLBAR **/
+::-webkit-scrollbar {width: 4px;height: 6px;}
+::-webkit-scrollbar-track {width: 2px; background-color:transparent!; border:0px solid var(--border);}
+::-webkit-scrollbar-thumb { background: var(--border);  border:1px solid var(--border);}
+.description::-webkit-scrollbar { width: 0px;height: 3px;}
+sidebar::-webkit-scrollbar {width: 1px;height: 4px;}
+
+/** BODY **/
+.tmblr-iframe--unified-controls {
+    transform:scale(0.6,0.6);
+    transform-origin:top right;
+    z-index:99999999999999999999999999999999999999999;
+    filter:invert(var(--tumblr-controls));
+   -webkit-filter:invert(var(--tumblr-controls));  
+}
+
+body {
+    background-color: var(--background); 
+    font-family:'Karla', sans-serif; 
+    color:var(--text); 
+    font-size:11px;
+    overflow:hidden;
+}
+
+body:before {
+    content:'';
+    position:fixed;
+    width:100%;
+    height:100%;
+    top: 0px;
+    left: 0px;
+      --dot-size:2px;
+      --dot-space:24px;
+    background:
+		linear-gradient(90deg, var(--background) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--background) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), var(--border);
+    opacity: var(--bg-pattern-opacity);
+}
+
+a {
+    text-decoration:none; 
+    font-weight:800; 
+    color:var(--accent);
+    text-transform:lowercase;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+} 
+
+b, strong {
+    color:var(--bold); 
+    font-family:'Manrope';
+    font-size:13px;
+    font-weight:900; 
+    text-transform:uppercase; 
+} 
+
+i { color:var(--accent); font-weight:600; }
+
+mark, .information blogname {
+    color:var(--text);
+    background-color: var(--buttons-bg);
+    padding:3px 5px;
+    border-radius:5px;
+}
+
+::selection { color: var(--text); background-color: var(--accent); }
+
+[aria-label]:after {
+    content: attr(aria-label);
+    opacity:0;
+    position: absolute;
+    top: 110%;
+    left: 10px;
+    z-index: 5000;
+    pointer-events: none;
+    padding: 8px 10px;
+    line-height: 15px;
+    white-space: nowrap;
+    text-decoration: none;
+    text-indent: 0;
+    overflow: visible;
+    font-size:9px;
+    font-weight: 700;
+    font-family:'Manrope';
+    text-transform:uppercase;
+    color: var(--text);
+    background-color: var(--background);
+    border-left: 6px solid var(--border);
+    border-radius: 2px;
+    box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+[aria-label]:hover:after, [aria-label]:focus:after { opacity: .9; }
+
+/** CONTAINER **/
+section { 
+    position:absolute; 
+    overflow:auto; 
+    width:calc(100% - 310px); 
+    height:calc(100% - 50px);  
+    right:0px; 
+    bottom:0px; 
+    padding:0px; 
+    z-index:1;
+} 
+
+.filters-container { display:flex; flex-wrap:wrap; justify-content:center; align-content:flex-start; }
+.filters-container > div { display:flex; } 
+
+
+/** HEADER **/
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:40px;
+    border-bottom:1px solid var(--border);
+    z-index:99;
+    background:var(--header-background);
+}
+
+header span {
+    position:absolute;
+    margin-left:15px;
+    margin-top:5px;
+    font-size:25px;
+    font-weight:900;
+    color:var(--header-links);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+
+.links {
+    position:absolute;
+    margin-left:50px;
+    margin-top:6px;
+    width:50%;
+    height:35px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.links a {
+    position:relative;
+    display:inline-block;
+    height:20px;
+    padding:6px;
+    text-align:center;
+    color:var(--header-links);
+    text-transform:uppercase;
+    font-size:13px;
+    font-family:'Manrope';
+    font-weight:500;
+    line-height:15px;
+}
+
+.links a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 140%;
+  height: 3px;
+  bottom: 0;
+  left: -20%;
+  background-color: var(--header-links);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.links a:hover::before { transform: scaleX(1); }
+
+
+/** SIDEBAR **/
+sidebar { 
+    position:fixed;
+    z-index:9;
+    top:0; 
+    left:0; 
+    width:300px; 
+    height:100%; 
+    border-right:1px solid var(--border);
+    background:var(--sidebar-background);
+    overflow-y:auto;
+    overflow-x:hidden;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,var(--shadow));
+-moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,var(--shadow));
+box-shadow: 0px 3px 7px 0px rgba(0,0,0,var(--shadow));
+}
+
+.information {
+    position:absolute;
+    margin-top:40px;
+    margin-left:0px;
+    width:300px;
+    height:130px;
+    border-bottom:1px solid var(--border);
+    z-index:999999;
+}
+
+.information img {
+    content:var(--icon);
+    position:absolute;
+    margin-top:35px;
+    border-radius:50%;
+    margin-left:17px;
+    width:60px;
+    height:60px;
+    object-fit:cover; 
+    padding:3px;
+    border:1px solid var(--border);
+}
+
+.information circle {
+    display:inline-block;
+    margin-top:100px;
+    margin-left:10px;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:var(--sidebar-background);
+    border:1px solid var(--border);
+}
+
+.information circle:first-of-type { margin-left:120px; }
+.information circle:nth-of-type(even) { background:var(--border);}
+
+.information quote {
+    position:absolute;
+    font-family:'Manrope';
+    margin-top:45px;
+    margin-left:90px;
+    font-size:14px;
+    font-weight:900;
+    line-height:17px;
+    width:170px;
+    text-transform:uppercase;
+    text-align:right;
+}
+
+.information quote::before { content:var(--quote); }
+
+.information blogname {
+    position:absolute;
+    margin-top:65px;
+    margin-left:95px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.information blogname::before { content:var(--blogname); }
+
+
+/** MUSES **/
+muse  {  
+    width:350px;  /*340*/
+    height:300px; /** 240 **/ 
+    background-color:var(--background); 
+    margin: 5px 10px 5px 5px; 
+    display:inline-block; 
+    border: 1px solid var(--border); 
+    padding:5px 6px;
+    border-radius:20px;
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,var(--shadow));
+    -moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,var(--shadow));
+    box-shadow: 1px 1px 4px 0px rgba(0,0,0,var(--shadow));
+} 
+
+muse img { 
+    position:absolute; 
+    margin-top:0px; 
+    margin-left:0px; 
+    width:170px; /*160*/
+    height:230px; /** 160 **/
+    object-fit:cover; 
+    filter: grayscale(var(--pic-filter)); 
+    -webkit-filter: grayscale(var(--pic-filter));
+    -moz-filter: grayscale(var(--pic-filter));
+    opacity:100%;
+    border: 1px solid var(--border); 
+    border-bottom: none;
+    border-radius: 16px 0px 0px 0px;
+}
+
+muse a {
+    position:absolute;
+    background:var(--accent);
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    margin-top:-12px;
+    margin-left:-18px;
+    border:8px solid var(--background);
+}
+
+muse a::before {
+    content:'●';
+    color:var(--background);
+    font-size:50px;
+    margin-left:4.5px;
+    line-height:35px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+muse a:hover:before { color:var(--accent); }
+
+.name {
+    position:absolute;
+    margin-top:2px;
+    margin-left:175px; /*165*/
+    width:170px;
+    height:60px;
+    font-family:'Manrope';
+    font-size:33px;
+    text-transform:uppercase;
+    font-weight:500;
+    letter-spacing:-0.5px;
+    line-height:25px;
+}
+
+.name p {
+    margin-top:2px;
+    font-weight:500;
+    font-size:23px;
+}
+
+.name:first-letter {
+    color:var(--accent);
+    font-style:bold;
+    font-weight:900;
+    font-size:35px;
+}
+
+.age, .gender {
+    position:absolute;
+    margin-top:231px; /** 161 **/
+    margin-left:0px;
+    width:85px; /*70*/
+    height:66px;
+    overflow:hidden;
+    border: 1px solid var(--border); 
+    background:var(--accent);
+    text-align:center;
+    font-family:'Bebas Neue';
+    font-size:28px;
+    font-weight:500;
+    line-height:66px; /*76*/
+    z-index:2;
+}
+
+.age { border-radius: 0px 0px 0px 16px; }
+
+.gender {
+    margin-left:86px; /*91*/
+    background:var(--background);
+    font-size:16px;
+    line-height:55px; /*65 */
+    border-left:none;
+    z-index:0;
+}
+
+.gender p { font-size:12px; margin-top:-38px; } /* -48 */
+
+.traits {
+    position:absolute;
+    border:1px solid var(--border);
+    border-left:none;
+    height:40px;
+    width:177px;
+    margin-top:60px;
+    margin-left:172px;/*162*/
+    text-align:center;
+    display:flex;
+    justify-content: space-between;
+    align-content:center;
+    flex-wrap:nowrap; 
+    background:var(--accent);
+    font-size:12px;
+}
+
+.traits span {
+    line-height:15px;
+    padding-top:5px;
+    flex:1;
+    border-right:1px solid var(--border);
+}
+
+.traits span:last-of-type { border-right:none; }
+
+.description {
+    position:absolute;
+    margin-top:101px;
+    margin-left:172px; /*162*/
+    height:186px; /** 136 **/
+    width:167px;
+    border:1px solid var(--border);
+    border-left:none;
+    border-radius: 0px 0px 16px 0px;
+    padding:5px;
+    overflow:auto;
+    text-align:var(--text-align);
+    font-size:13px;
+}
+
+
+/** COLOR VARAIBLES **/
+filter[color1] .age, filter[color1] .traits, filter[color1] a { background:var(--one); }
+
+filter[color1] .name:first-letter, filter[color1] a:hover:before, filter[color1] i, filter[color1] b { color:#bd6574; }
+
+filter[color2] .age, filter[color2] .traits, filter[color2] a { background:var(--two); }
+filter[color2] .name:first-letter, filter[color2] a:hover:before, filter[color2] b, filter[color2] i { color:#978d07; }
+
+filter[color3] .age, filter[color3] .traits, filter[color3] a { background:var(--three); }
+filter[color3] .name:first-letter, filter[color3] a:hover:before, filter[color3] i, filter[color3] b { color:#4b9cc2; }
+
+filter[color4] .age, filter[color4] .traits, filter[color4] a { background:var(--four); }
+
+filter[color4] .name:first-letter, filter[color4] a:hover:before, filter[color4] i, filter[color4] b { color:#695395; } 
+
+filter[color5] .age, filter[color5] .traits, filter[color5] a { background:var(--five); }
+
+filter[color5] .name:first-letter, filter[color5] a:hover:before, filter[color5] i, filter[color5] b { color:#338f63; } 
+
+
+/** FILTERS **/
+.filter {
+    position:relative;
+    width:300px;
+    min-height:100px;
+    margin-bottom:20px;
+    margin-left:0px;
+    text-align:left;
+    border-bottom:1px solid var(--border);
+    text-align:center;
+    padding-bottom:20px;
+}
+
+.filtercontainer { position:absolute; margin-top:190px; }
+
+.filter p {
+    margin-top:0px;
+    font-family:'Manrope';
+    font-size:23px;
+    font-variant: small-caps;
+    font-weight:700;
+    margin-bottom:12px;
+    text-align:center;
+    letter-spacing:1px;
+    color:var(--text);
+}
+
+.filter_links { margin-left:15px; width:275px; }
+
+label, input { 
+    cursor:pointer;
+    width:80px;
+    padding:5px;
+    height:20px;
+    margin-right:5px;
+    margin-bottom:5px;
+    background:var(--buttons-bg);
+    border-radius:10px;
+    display:inline-block;
+    border:1px solid var(--border);
+    font-weight:600;
+    text-align:center;
+    color:var(--text);
+    text-transform:uppercase;
+    font-size:11px;
+    font-family:'Manrope';
+    line-height:20px;
+    transition: all .7s  ease;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,var(--shadow));
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,var(--shadow));
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,var(--shadow));
+} 
+
+input:checked + label, label:hover { background:var(--accent); color:var(--text);border:1px solid var(--accent); } 
+
+#one input:checked + label, #one label:hover { background:var(--one); color:var(--text);border:1px solid var(--one); } 
+
+#two input:checked + label, #two label:hover { background:var(--two); color:var(--text);border:1px solid var(--two); } 
+
+#three input:checked + label, #three label:hover { background:var(--three); color:var(--text);border:1px solid var(--three); } 
+
+#four input:checked + label, #four label:hover { background:var(--four); color:var(--text);border:1px solid var(--four); } 
+
+#five input:checked + label, #five label:hover { background:var(--five); color:var(--text);border:1px solid var(--five); } 
+
+
+input[type="radio"] { display:none; } 
+
+@keyframes hideFilter {50% { transform:scale(0); height:100px; width:100px; } 100% { transform:scale(0); width:0; height:0; margin:0;}}
+
+
+
+
+/** IMPORTANT!!! THIS NEEDS TO BE EDITED IF YOU ADD MORE/OTHER FILTERS!!!
 
 Everything you add as filter labels you have to add here. Look what you have in the Filter id="" and for="" section you need to add here. Don't use numbers and don't put spaces between words when you use more than one word as filter. A tutorial link can be found on top of the code. **/
-    
-    sidebar:has(input:checked+label[for='primary'])~section filter:not([primary]),
-    sidebar:has(input:checked+label[for='secondary'])~section filter:not([secondary]),
-    sidebar:has(input:checked+label[for='lowactivity'])~section filter:not([lowactivity]),
-    sidebar:has(input:checked+label[for='test'])~section filter:not([test]),
-    sidebar:has(input:checked+label[for='yescros'])~section filter:not([yescros]),
-    sidebar:has(input:checked+label[for='nocros'])~section filter:not([nocros]),
-    sidebar:has(input:checked+label[for='maybecros'])~section filter:not([maybecros]),
-    sidebar:has(input:checked+label[for='Lost'])~section filter:not([Lost]),
-    sidebar:has(input:checked+label[for='Chuck'])~section filter:not([Chuck]),
-    sidebar:has(input:checked+label[for='DragonAge'])~section filter:not([DragonAge]),
-    sidebar:has(input:checked+label[for='Marvel'])~section filter:not([Marvel]),
-    sidebar:has(input:checked+label[for='DoctorWho'])~section filter:not([DoctorWho]),
-    sidebar:has(input:checked+label[for='FFVI'])~section filter:not([FFVI]),
-    sidebar:has(input:checked+label[for='LotR'])~section filter:not([LotR]),
-    sidebar:has(input:checked+label[for='theHundred'])~section filter:not([theHundred]),
-    sidebar:has(input:checked+label[for='Grishaverse'])~section filter:not([Grishaverse]),
-    sidebar:has(input:checked+label[for='baldursgate'])~section filter:not([baldursgate]),
-    sidebar:has(input:checked+label[for='theboys'])~section filter:not([theboys]),
-    sidebar:has(input:checked+label[for='untildawn'])~section filter:not([untildawn]),
-    sidebar:has(input:checked+label[for='nofandom'])~section filter:not([nofandom]),
-    sidebar:has(input:checked+label[for='Fallout'])~section filter:not([Fallout]),
-    sidebar:has(input:checked+label[for='dc'])~section filter:not([dc]),
-    sidebar:has(input:checked+label[for='bridgerton'])~section filter:not([bridgerton]),
-    sidebar:has(input:checked+label[for='historical'])~section filter:not([historical]),
-    sidebar:has(input:checked+label[for='xmen'])~section filter:not([xmen]),
-    sidebar:has(input:checked+label[for='turn'])~section filter:not([turn]),
-    sidebar:has(input:checked+label[for='firefly'])~section filter:not([firefly]),
-    sidebar:has(input:checked+label[for='thewitcher'])~section filter:not([thewitcher]),
-    sidebar:has(input:checked+label[for='opla'])~section filter:not([opla]),
-    sidebar:has(input:checked+label[for='ouat'])~section filter:not([ouat]),
-    sidebar:has(input:checked+label[for='merlin'])~section filter:not([merlin]),
-    sidebar:has(input:checked+label[for='magical'])~section filter:not([magical]),
-    sidebar:has(input:checked+label[for='telltale'])~section filter:not([telltale]),
-    sidebar:has(input:checked+label[for='tlou'])~section filter:not([tlou]),
-    sidebar:has(input:checked+label[for='modern'])~section filter:not([modern]),
-    sidebar:has(input:checked+label[for='fm'])~section filter:not([fm]),
-    sidebar:has(input:checked+label[for='ff'])~section filter:not([ff]),
-    sidebar:has(input:checked+label[for='aroff'])~section filter:not([aroff]),
-    sidebar:has(input:checked+label[for='aceff'])~section filter:not([aceff]),
-    sidebar:has(input:checked+label[for='arofm'])~section filter:not([arofm]),
-    sidebar:has(input:checked+label[for='acefm'])~section filter:not([acefm]),
-    sidebar:has(input:checked+label[for='aroace'])~section filter:not([aroace]),
-    sidebar:has(input:checked+label[for='canondiv'])~section filter:not([canondiv]),
-    sidebar:has(input:checked+label[for='oc'])~section filter:not([oc]),
-    sidebar:has(input:checked+label[for='au'])~section filter:not([au]),
-    sidebar:has(input:checked+label[for='canonLost'])~section filter:not([canonLost]),
-    sidebar:has(input:checked+label[for='canonBridgerton'])~section filter:not([canonBridgerton]),
-    sidebar:has(input:checked+label[for='canonFirefly'])~section filter:not([canonFirefly]),
-    sidebar:has(input:checked+label[for='canonChuck'])~section filter:not([canonChuck]),
-    sidebar:has(input:checked+label[for='canonDragonAge'])~section filter:not([canonDragonAge]),
-    sidebar:has(input:checked+label[for='canonMarvel'])~section filter:not([canonMarvel]),
-    sidebar:has(input:checked+label[for='canonopla'])~section filter:not([canonopla]),
-    sidebar:has(input:checked+label[for='canonDoctorWho'])~section filter:not([canonDoctorWho]),
-    sidebar:has(input:checked+label[for='canonFFVI'])~section filter:not([canonFFVI]),
-    sidebar:has(input:checked+label[for='canonLotR'])~section filter:not([canonLotR]),
-    sidebar:has(input:checked+label[for='canontheHundred'])~section filter:not([canontheHundred]),
-    sidebar:has(input:checked+label[for='canonGrishaverse'])~section filter:not([canonGrishaverse]),
-    sidebar:has(input:checked+label[for='canonbaldursgate'])~section filter:not([canonbaldursgate]),
-    sidebar:has(input:checked+label[for='canonuntildawn'])~section filter:not([canonuntildawn]),
-    sidebar:has(input:checked+label[for='canonouat'])~section filter:not([canonouat]),
-    sidebar:has(input:checked+label[for='canonFallout'])~section filter:not([canonFallout])
-    /**no comma at the end **/
-    
-    {
-      animation: hideFilter .8s 1 forwards!important;
-    }
-  </style>
-</head>
 
-<body>
-  <!-- - HEADER START --->
-  <header><span class="lnr lnr-pushpin"></span>
-    <div class="links">
-      <!-- This is the sidebar menu replace the links with what you want --><a href="https://savingthrcw.tumblr.com">Home</a><a href="https://sites.google.com/view/savingthrcw/rules">rules and bios</a>
-      <p>Click on the circle next to the photo for the direct bio!</p>
-    </div>
-  </header>
-  <!-- - HEADER END --->
-  <!-- - SIDEBAR START --->
-  <sidebar>
-    <div class="information"><img src="">
-      <quote></quote>
-      <blogname></blogname>
-      <circle></circle>
-      <circle></circle>
-      <circle></circle>
-      <circle></circle>
-      <circle></circle>
-    </div>
-    <!-- Do not touch-->
-    <div class="filtercontainer">
-      <!-- THE FILTERS START HERE!!!! The ID (id="") needs to be the same as the for="" in the label. Make sure the name="" of the same batch is the same. For example: everything under the age section has name="age" in it. -->
-      <!-- FILTER CATEGORY 1 STARTS HERE -->
-      <div class="filter">
-        <p>status</p>
-        <div class="filter_links" id="five">
-          <!-- by adding one,
-                                                                                                                                                                                                                                                             two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">--><input type="radio" id="allstatus" name="status" checked><label for="allstatus">all</label><input type="radio" id="primary" name="status"><label for="primary">high activity</label><input type="radio" id="secondary" name="status"><label for="secondary">mid activity</label>
-          <input type="radio" id="lowactivity" name="status"><label for="lowactivity">low activity</label><input type="radio" id="test" name="status"><label for="test">test</label></div>
-      </div>
-      <!-- FILTER CATEGORY 1 ENDS HERE -->
-      <!-- FILTER CATEGORY 2 STARTS HERE -->
-      <div class="filter">
-        <p>Crossovers:</p>
-        <div class="filter_links" id="five">
-          <!-- by adding one,
-                                                                                                                                                                                                                                                             two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">--><input type="radio" id="allcros" name="cros" checked><label for="allcros">all</label><input type="radio" id="yescros" name="cros"><label for="yescros">yes</label><input type="radio" id="nocros" name="cros"><label for="nocros">no</label>
-          <input type="radio" id="maybecros" name="cros"><label for="maybecros">maybe</label></div>
-      </div>
-      <!-- FILTER CATEGORY 2 ENDS HERE -->
-      <!-- FILTER CATEGORY 3 STARTS HERE -->
-      <div class="filter">
-        <p>Open to these fandoms:</p>
-        <div class="filter_links" id="five"><input type="radio" id="allgender" name="gender" checked><label for="allgender">all</label><input type="radio" id="baldursgate" name="gender"><label for="baldursgate">bg3</label><input type="radio" id="bridgerton" name="gender"><label for="bridgerton">bridgerton</label>
-          <input type="radio" id="Chuck" name="gender"><label for="Chuck">Chuck</label><input type="radio" id="DoctorWho" name="gender"><label for="DoctorWho">Doctor Who</label><input type="radio" id="dc" name="gender"><label for="dc">dc</label>
-          <input type="radio" id="DragonAge" name="gender">
-          <label for="DragonAge">Dragon Age</label><input type="radio" id="Fallout" name="gender"><label for="Fallout">Fallout</label><input type="radio" id="firefly" name="gender"><label for="firefly">firefly</label><input type="radio" id="FFVI" name="gender">
-          <label for="FFVI">FFVI</label>
-          <input type="radio" id="Grishaverse" name="gender"><label for="Grishaverse">Grishaverse</label><input type="radio" id="historical" name="gender"><label for="historical">historical</label><input type="radio" id="Lost" name="gender">
-          <label for="Lost">Lost</label><input type="radio" id="LotR" name="gender"><label for="LotR">LotR</label><input type="radio" id="magical" name="gender"><label for="magical">magical</label><input type="radio" id="Marvel" name="gender"><label for="Marvel">Marvel</label>
-          <input type="radio" id="merlin" name="gender"><label for="merlin">merlin</label><input type="radio" id="modern" name="gender"><label for="modern">modern</label><input type="radio" id="opla" name="gender"><label for="opla">la onepiece</label>
-          <input type="radio" id="ouat" name="gender">
-          <label for="ouat">ouat</label><input type="radio" id="telltale" name="gender"><label for="telltale">telltale twd</label><input type="radio" id="theboys" name="gender"><label for="theboys">the boys</label><input type="radio" id="theHundred" name="gender">
-          <label for="theHundred">the 100</label><input type="radio" id="tlou" name="gender"><label for="tlou">last of us</label><input type="radio" id="thewitcher" name="gender"><label for="thewitcher">the witcher</label>
-          <input type="radio" id="turn" name="gender"><label for="turn">TURN AWS</label><input type="radio" id="untildawn" name="gender"><label for="untildawn">Until Dawn</label><input type="radio" id="xmen" name="gender"><label for="xmen">x-men (tv)</label></div>
-      </div>
-      <!-- FILTER CATEGORY 3 ENDS HERE -->
-      <!-- FILTER CATEGORY 4 STARTS HERE -->
-      <div class="filter">
-        <p>Type*:</p>
-        <div class="filter_links" id="five">
-          <!-- by adding one,
-                                                                                                                                                                                                                                                             two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">--><input type="radio" id="allage" name="age" checked><label for="allage">all</label><input type="radio" id="canondiv" name="age"><label for="canondiv">canon div</label><input type="radio" id="oc" name="age"><label for="oc">oc</label><input type="radio"
-            id="au" name="age"><label for="au">au</label><br><br>
-          <p style="font-size:12px">*canon div: I changed something about the character's portrayal.<br> AU: I changed some fundamental aspects of canon that alters everything</div>
-      </div>
-      </p>
-      <!-- FILTER CATEGORY 4 ENDS HERE -->
-      <!-- FILTER CATEGORY 5 STARTS HERE -->
-      <div class="filter">
-        <p>Open to ships*:</p>
-        <div class="filter_links" id="five">
-          <!-- by adding one,
-                                                                                                                                                                                                                                                             two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">--><input type="radio" id="allship" name="ship" checked><label for="allship">all</label><input type="radio" id="fm" name="ship"><label for="fm">f/m</label><input type="radio" id="ff" name="ship"><label for="ff">f/f</label><input type="radio" id="arofm"
-            name="ship"><label for="arofm">aro f/m</label><input type="radio" id="aroff" name="ship"><label for="aroff">aro f/f</label><input type="radio" id="acefm" name="ship"><label for="acefm">f/m ace</label><input type="radio" id="aceff" name="ship">
-          <label for="aceff">f/f ace</label><input type="radio" id="aroace" name="ship"><label for="aroace">aroace</label><br><br>
-          <p style="font-size:12px">*aro and ace are meant as a spectrum, from demi to repulsed depending on the character, so 'ace f/f' could mean romantically attracted to women but sex repulsed or demi or neutral etc unlike f/f who is simply attracted to women physically and
-            romantically. <br>Bi/pan characters have both f/m and f/f checked separatedly to keep this list manageable.</p>
-        </div>
-      </div>
-      <!-- FILTER CATEGORY 5 ENDS HERE -->
-      <!-- FILTER CATEGORY 6 STARTS HERE -->
-      <div class="filter">
-        <p>Originally from:</p>
-        <div class="filter_links" id="five"><input type="radio" id="allcanonically" name="canonically" checked><label for="allcanonically">multifandom</label><input type="radio" id="canonbaldursgate" name="canonically"><label for="canonbaldursgate">bg3</label><input type="radio" id="canonBridgerton"
-            name="canonically"><label for="canonBridgerton">bridgerton</label><input type="radio" id="canonChuck" name="canonically"><label for="canonChuck">Chuck</label><input type="radio" id="canonDoctorWho" name="canonically"><label for="canonDoctorWho">Doctor Who</label>
-          <input type="radio" id="canonDragonAge" name="canonically"><label for="canonDragonAge">Dragon Age</label><input type="radio" id="canonFallout" name="canonically"><label for="canonFallout">Fallout</label><input type="radio" id="canonFirefly"
-            name="canonically"><label for="canonFirefly">firefly</label>
-          <input type="radio" id="canonFFVI" name="canonically"><label for="canonFFVI">FFVI</label><input type="radio" id="canonLost" name="canonically"><label for="canonLost">Lost</label><input type="radio" id="canonLotR" name="canonically"><label for="canonLotR">LotR</label>
-          <input type="radio" id="canonMarvel" name="canonically"><label for="canonMarvel">Marvel</label><input type="radio" id="canonopla" name="canonically"><label for="canonopla">la onepiece</label><input type="radio" id="canontheHundred" name="canonically">
-          <label for="canontheHundred">the 100</label>
-          <input type="radio" id="canonuntildawn" name="canonically"><label for="canonuntildawn">Until Dawn</label></div>
-      </div>
-      <!-- FILTER CATEGORY 6 ENDS HERE -->
-      <!-- You can add more filters just copy paste from filter category starts here to filter category ends here and paste above this text. The sidebar keeps scrolling. -->
-    </div>
-  </sidebar>
-  <!-- - SIDEBAR END --->
+sidebar:has(input:checked + label[for='primary']) ~ section filter:not([primary]), sidebar:has(input:checked + label[for='secondary']) ~ section filter:not([secondary]), 
+sidebar:has(input:checked + label[for='lowactivity']) ~ section filter:not([lowactivity]), 
+
+sidebar:has(input:checked + label[for='test']) ~ section filter:not([test]), 
+sidebar:has(input:checked + label[for='yescros']) ~ section filter:not([yescros]), 
+sidebar:has(input:checked + label[for='nocros']) ~ section filter:not([nocros]), 
+sidebar:has(input:checked + label[for='maybecros']) ~ section filter:not([maybecros]), 
+
+
+sidebar:has(input:checked + label[for='Lost']) ~ section filter:not([Lost]),
+sidebar:has(input:checked + label[for='Chuck']) ~ section filter:not([Chuck]),
+sidebar:has(input:checked + label[for='DragonAge']) ~ section filter:not([DragonAge]),
+sidebar:has(input:checked + label[for='Marvel']) ~ section filter:not([Marvel]),
+sidebar:has(input:checked + label[for='DoctorWho']) ~ section filter:not([DoctorWho]),
+sidebar:has(input:checked + label[for='FFVI']) ~ section filter:not([FFVI]),
+sidebar:has(input:checked + label[for='LotR']) ~ section filter:not([LotR]),
+sidebar:has(input:checked + label[for='theHundred']) ~ section filter:not([theHundred]),
+sidebar:has(input:checked + label[for='Grishaverse']) ~ section filter:not([Grishaverse]),
+sidebar:has(input:checked + label[for='baldursgate']) ~ section filter:not([baldursgate]),
+sidebar:has(input:checked + label[for='theboys']) ~ section filter:not([theboys]),
+sidebar:has(input:checked + label[for='untildawn']) ~ section filter:not([untildawn]),
+
+sidebar:has(input:checked + label[for='nofandom']) ~ section filter:not([nofandom]),
+sidebar:has(input:checked + label[for='Fallout']) ~ section filter:not([Fallout]),
+
+sidebar:has(input:checked + label[for='dc']) ~ section filter:not([dc]),
+sidebar:has(input:checked + label[for='bridgerton']) ~ section filter:not([bridgerton]),
+sidebar:has(input:checked + label[for='historical']) ~ section filter:not([historical]),
+sidebar:has(input:checked + label[for='xmen']) ~ section filter:not([xmen]),
+
+sidebar:has(input:checked + label[for='turn']) ~ section filter:not([turn]),
+sidebar:has(input:checked + label[for='firefly']) ~ section filter:not([firefly]),
+sidebar:has(input:checked + label[for='thewitcher']) ~ section filter:not([thewitcher]),
+sidebar:has(input:checked + label[for='opla']) ~ section filter:not([opla]),
+
+sidebar:has(input:checked + label[for='ouat']) ~ section filter:not([ouat]),
+sidebar:has(input:checked + label[for='merlin']) ~ section filter:not([merlin]),
+sidebar:has(input:checked + label[for='magical']) ~ section filter:not([magical]),
+sidebar:has(input:checked + label[for='telltale']) ~ section filter:not([telltale]),
+sidebar:has(input:checked + label[for='tlou']) ~ section filter:not([tlou]),
+
+sidebar:has(input:checked + label[for='modern']) ~ section filter:not([modern]),
+
+sidebar:has(input:checked + label[for='fm']) ~ section filter:not([fm]),
+sidebar:has(input:checked + label[for='ff']) ~ section filter:not([ff]),
+sidebar:has(input:checked + label[for='aroff']) ~ section filter:not([aroff]),
+sidebar:has(input:checked + label[for='aceff']) ~ section filter:not([aceff]),
+sidebar:has(input:checked + label[for='arofm']) ~ section filter:not([arofm]),
+sidebar:has(input:checked + label[for='acefm']) ~ section filter:not([acefm]),
+sidebar:has(input:checked + label[for='aroace']) ~ section filter:not([aroace]),
+
+
+
+sidebar:has(input:checked + label[for='canondiv']) ~ section filter:not([canondiv]), 
+sidebar:has(input:checked + label[for='oc']) ~ section filter:not([oc]), 
+sidebar:has(input:checked + label[for='au']) ~ section filter:not([au]),
+
+sidebar:has(input:checked + label[for='canonLost']) ~ section filter:not([canonLost]),
+sidebar:has(input:checked + label[for='canonBridgerton']) ~ section filter:not([canonBridgerton]),
+sidebar:has(input:checked + label[for='canonFirefly']) ~ section filter:not([canonFirefly]),
+
+sidebar:has(input:checked + label[for='canonChuck']) ~ section filter:not([canonChuck]),
+sidebar:has(input:checked + label[for='canonDragonAge']) ~ section filter:not([canonDragonAge]),
+sidebar:has(input:checked + label[for='canonMarvel']) ~ section filter:not([canonMarvel]),
+sidebar:has(input:checked + label[for='canonopla']) ~ section filter:not([canonopla]),
+sidebar:has(input:checked + label[for='canonDoctorWho']) ~ section filter:not([canonDoctorWho]),
+sidebar:has(input:checked + label[for='canonFFVI']) ~ section filter:not([canonFFVI]),
+sidebar:has(input:checked + label[for='canonLotR']) ~ section filter:not([canonLotR]),
+sidebar:has(input:checked + label[for='canontheHundred']) ~ section filter:not([canontheHundred]),
+sidebar:has(input:checked + label[for='canonGrishaverse']) ~ section filter:not([canonGrishaverse]),
+sidebar:has(input:checked + label[for='canonbaldursgate']) ~ section filter:not([canonbaldursgate]),
+sidebar:has(input:checked + label[for='canonuntildawn']) ~ section filter:not([canonuntildawn]),
+
+sidebar:has(input:checked + label[for='canonouat']) ~ section filter:not([canonouat]),
+sidebar:has(input:checked + label[for='canonFallout']) ~ section filter:not([canonFallout]) /**no comma at the end **/
+
+ 
+{animation: hideFilter .8s 1 forwards!important; }
+
+</style>
+    
+</head><body><!--                                - HEADER START --->                     <header><span class="lnr lnr-pushpin"></span><div class="links"> 
+
+<!--                                 This is the sidebar menu replace the links with what you want -->                     <a href="https://savingthrcw.tumblr.com">Home</a>  
+
+<a href="https://sites.google.com/view/savingthrcw/rules">rules and bios</a>  
+
+    <p>Click on the circle next to the photo for the direct bio!</p>
+
+</div>
+    
+</header><!--                                - HEADER END --->                     <!--                                - SIDEBAR START --->                     <sidebar><div class="information"><img src=""><quote></quote><blogname></blogname><circle></circle><circle></circle><circle></circle><circle></circle><circle></circle>
+    
+
+</div>
+
+<!--                                Do not touch-->           
+
+<div class="filtercontainer">
+
+
+
+<!--                                 THE FILTERS START HERE!!!! 
+The ID (id="") needs to be the same as the for="" in the label. 
+Make sure the name="" of the same batch is the same. For example: everything under the age section has name="age" in it. -->                     <!--                                 FILTER CATEGORY 1 STARTS HERE -->                     <div class="filter"><p>status</p><div class="filter_links" id="five">                                                                         <!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                     <input type="radio" id="allstatus" name="status" checked> <label for="allstatus">all</label>                                                              
+<input type="radio" id="primary" name="status"><label for="primary">high activity</label>                                                             
+<input type="radio" id="secondary" name="status"><label for="secondary">mid activity</label>                                                         
+<input type="radio" id="lowactivity" name="status"> <label for="lowactivity">low activity</label>                                                      
+<input type="radio" id="test" name="status"> <label for="test">test</label>                                                                </div></div>
+
+
+<!--                                 FILTER CATEGORY 1 ENDS HERE -->                 
+
+
+
+
+<!--                                 FILTER CATEGORY 2 STARTS HERE -->           <div class="filter">
+<p>Crossovers:</p>
+<div class="filter_links" id="five"> <!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                    
+<input type="radio" id="allcros" name="cros" checked> 
+<label for="allcros">all</label>  
+<input type="radio" id="yescros" name="cros">
+<label for="yescros">yes</label>                                    
+<input type="radio" id="nocros" name="cros">
+<label for="nocros">no</label>                                                    <input type="radio" id="maybecros" name="cros"> 
+<label for="maybecros">maybe</label>     
+</div></div>
+<!--                         FILTER CATEGORY 2 ENDS HERE -->      
+
+
+       
+
+
+<!--                                 FILTER CATEGORY 3 STARTS HERE -->                     <div class="filter"><p>Open to these fandoms:</p><div class="filter_links" id="five"><input type="radio" id="allgender" name="gender" checked> <label for="allgender">all</label>                 
+<input type="radio" id="baldursgate" name="gender"> <label for="baldursgate">bg3</label>                                                               
+
+<input type="radio" id="bridgerton" name="gender"> <label for="bridgerton">bridgerton</label>                                                     
+                                   
+
+<input type="radio" id="Chuck" name="gender"> <label for="Chuck">Chuck</label>                                                               
+<input type="radio" id="DoctorWho" name="gender"> <label for="DoctorWho">Doctor Who</label>
+<input type="radio" id="dc" name="gender"> <label for="dc">dc</label>         
+<input type="radio" id="DragonAge" name="gender"> <label for="DragonAge">Dragon Age</label>                                                             
+<input type="radio" id="Fallout" name="gender"> <label for="Fallout">Fallout</label>                                                               
+<input type="radio" id="firefly" name="gender"> <label for="firefly">firefly</label>                                                         
+<input type="radio" id="FFVI" name="gender"> <label for="FFVI">FFVI</label>                                                                
+<input type="radio" id="Grishaverse" name="gender"> <label for="Grishaverse">Grishaverse</label>  
+<input type="radio" id="historical" name="gender"> <label for="historical"> historical</label>                     
+<input type="radio" id="Lost" name="gender"><label for="Lost">Lost</label>                                                              
+<input type="radio" id="LotR" name="gender"> <label for="LotR">LotR</label>  
+	<input type="radio" id="magical" name="gender"> <label for="magical">magical</label> 
+	
+<input type="radio" id="Marvel" name="gender"> <label for="Marvel">Marvel</label>                                                              
+<input type="radio" id="merlin" name="gender"> <label for="merlin">merlin</label>  
+
+<input type="radio" id="modern" name="gender"> <label for="modern">modern</label> 
+
+<input type="radio" id="opla" name="gender"> <label for="opla">la onepiece</label>                                                    
+
+<input type="radio" id="ouat" name="gender"> <label for="ouat">ouat</label>    
+<input type="radio" id="telltale" name="gender"> <label for="telltale">telltale twd</label>                                    
+<input type="radio" id="theboys" name="gender"> <label for="theboys">the boys</label>                                                               
+
+<input type="radio" id="theHundred" name="gender"> <label for="theHundred">the 100</label>                                                             
+    <input type="radio" id="tlou" name="gender"> <label for="tlou">last of us</label>                                                                      
+<input type="radio" id="thewitcher" name="gender"> <label for="thewitcher">the witcher</label>                                                            
+<input type="radio" id="turn" name="gender"> <label for="turn">TURN AWS</label> 
+<input type="radio" id="untildawn" name="gender"> <label for="untildawn">Until Dawn</label> 
+
+  <input type="radio" id="xmen" name="gender"> <label for="xmen">x-men (tv)</label>         
+    
+</div></div><!--                                 FILTER CATEGORY 3 ENDS HERE -->                 
+
+
+
+
+<!--                                 FILTER CATEGORY 4 STARTS HERE -->                     <div class="filter"><p>Type*:</p><div class="filter_links" id="five"> 
+	<!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                 
+<input type="radio" id="allage" name="age" checked> <label for="allage">all</label>                                                                <input type="radio" id="canondiv" name="age"><label for="canondiv">canon div</label>                                             
+<input type="radio" id="oc" name="age"><label for="oc">oc</label>                                                              
+<input type="radio" id="au" name="age"> <label for="au">au</label>      
+<br><br>
+<p style="font-size:12px">*canon div: I changed something about the character's portrayal.<br>
+AU: I changed some fundamental aspects of canon that alters everything</div></div></p>
+
+
+<!-- FILTER CATEGORY 4 ENDS HERE -->                  
+
+
+<!--                                 FILTER CATEGORY 5 STARTS HERE -->           <div class="filter">
+<p>Open to ships*:</p>
+<div class="filter_links" id="five"> <!--                                 by adding one, two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">                                     -->                    
+<input type="radio" id="allship" name="ship" checked><label for="allship">all</label>  
+<input type="radio" id="fm" name="ship"><label for="fm">f/m</label>                                   
+<input type="radio" id="ff" name="ship"><label for="ff">f/f</label>  
+<input type="radio" id="arofm" name="ship"> <label for="arofm">aro f/m</label>    
+<input type="radio" id="aroff" name="ship"> <label for="aroff">aro f/f</label>    
+<input type="radio" id="acefm" name="ship"> <label for="acefm">f/m ace</label>     
+<input type="radio" id="aceff" name="ship"> <label for="aceff">f/f ace</label>     
+<input type="radio" id="aroace" name="ship"> <label for="aroace">aroace</label>     <br><br>
+<p style="font-size:12px">*aro and ace are meant as a spectrum, from demi to repulsed depending on the character, so 'ace f/f' could mean romantically attracted to women but sex repulsed or demi or neutral etc unlike f/f who is simply attracted to women physically and romantically. <br>Bi/pan characters have both f/m and f/f checked separatedly to keep this list manageable.</p>
+</div>
+    
+</div>
+
+<!--                         FILTER CATEGORY 5 ENDS HERE -->      
+
+
+
+
+
+
+<!--                                 FILTER CATEGORY 6 STARTS HERE -->    
+
+
+                 <div class="filter"><p>Originally from:</p><div class="filter_links" id="five"><input type="radio" id="allcanonically" name="canonically" checked> <label for="allcanonically">multifandom</label>                 
+<input type="radio" id="canonbaldursgate" name="canonically"> <label for="canonbaldursgate">bg3</label>                                                               
+
+<input type="radio" id="canonBridgerton" name="canonically"> <label for="canonBridgerton">bridgerton</label>                                                     
+                                   
+<input type="radio" id="canonChuck" name="canonically"> <label for="canonChuck">Chuck</label>                                                               
+<input type="radio" id="canonDoctorWho" name="canonically"> <label for="canonDoctorWho">Doctor Who</label>
+<input type="radio" id="canonDragonAge" name="canonically"> <label for="canonDragonAge">Dragon Age</label>                                                             
+<input type="radio" id="canonFallout" name="canonically"> <label for="canonFallout">Fallout</label>                                                               
+<input type="radio" id="canonFirefly" name="canonically"> <label for="canonFirefly">firefly</label>                                                         
+<input type="radio" id="canonFFVI" name="canonically"> <label for="canonFFVI">FFVI</label>                                
+<input type="radio" id="canonLost" name="canonically"><label for="canonLost">Lost</label>                                                              
+<input type="radio" id="canonLotR" name="canonically"> <label for="canonLotR">LotR</label>   
+<input type="radio" id="canonMarvel" name="canonically"> <label for="canonMarvel">Marvel</label>                                                              
+
+<input type="radio" id="canonopla" name="canonically"> <label for="canonopla">la onepiece</label>                                                    
+
+                                                    
+
+<input type="radio" id="canontheHundred" name="canonically"> <label for="canontheHundred">the 100</label>                                                             
+                                                       
+
+<input type="radio" id="canonuntildawn" name="canonically"> <label for="canonuntildawn">Until Dawn</label> 
+
+
+</div></div><!--                                 FILTER CATEGORY 6 ENDS HERE -->                 
+
+
+
+
+<!--                                 You can add more filters just copy paste from filter category starts here to filter category ends here and paste above this text. The sidebar keeps scrolling. -->                  
+
+    
+    
+</div></sidebar>
+
+
+
+<!--                                - SIDEBAR END --->                     <section class="filters-container"> 
+<!--                                MUSES GO HERE-->      
+
+
+
+
 
 
 
 	
-  <section class="filters-container">
-    <!-- MUSES GO HERE-->
+	                                        
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color3 primary au nocros canonfallout aceff ff fm acefm fallout> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/30903a72ff406386ab981572625c8d3d/fc06d0a3ae77c7ad-db/s540x810/6e920021168b0ad1bc6bba9140e81f18a162781b.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/fallout-verse/au-janey-fallout-prime" aria-label="muse profile"></a> <!--                                 If you want no link delete this -->                     <div class="name">Janey <p>Howard</p></div><div class="age">34+</div>
+<div class="gender">Fallout <p>AU</p></div><div class="traits"> <span>selective, open to *some* canon, canon div. and ocs</span>
+    </div>
+<div class="description"><b>Wanted interactions</b>: obviously her father (The Ghoul), Lucy, Max, other tvshow characters, and selectively-speaking ocs and main characters from the games that I know and that I think can work with her, seeing as she's a very particular type of person and I only have vague memories of the game-verse besides fallout 4. Cannot interact with her mother because the thread would immediately end with her killing Barb.  <br><b>open to ship with:</b>  She's demi-biromantic (takes a lot for her to develop a crush, she's too grumpy) but also ace and very sex repulsed to the point that kissing is stretching it. I won't write her forcing herself to sleep with people even if she might be willing to do so.
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                             
+
+
+ <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                             
 
 
 
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 primary au nocros canonfallout aceff ff fm acefm fallout>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/30903a72ff406386ab981572625c8d3d/fc06d0a3ae77c7ad-db/s540x810/6e920021168b0ad1bc6bba9140e81f18a162781b.png">       <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/fallout-verse/au-janey-fallout-prime" aria-label="muse profile"></a>        <!-- If you want no link delete this -->
-        <div class="name">Janey           <p>Howard</p>        </div>
-        <div class="age">34+</div>
-        <div class="gender">Fallout          <p>AU</p>
-        </div>
-        <div class="traits"><span>selective,    open to *some* canon, canon div. and ocs</span></div>
-        <div class="description"><b>Wanted interactions:</b>obviously her father (The Ghoul), Lucy, Max, other tvshow characters, and selectively-speaking ocs and main characters from the games that I know and that I think can work with her, seeing as she's a very particular type of person and I only have vague memories of the game-verse besides fallout 4. Cannot interact with her mother because the thread would immediately end with her killing Barb. 
-		<br><b>open to ship with:</b> She's demi-biromantic (takes a lot for her to develop a crush, she's too grumpy) but also ace and very sex repulsed to the point that kissing is stretching it. I won't write her forcing herself to sleep with people even if she might be willing to do so. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE bELOW-->
     
 
 
+    
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color2 canondoctorwho merlin modern fallout magical firefly grishaverse dragonage canondiv doctorwho historical marvel xmen dc bg3 yescros au fm ff modern primary> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/6b56d33a067cab2eff9b0f5d7241c216/e28c56235ba8931b-2a/s400x600/9becb736621db449db4ddeadaecef0e958ac5a3f.pnj">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/doctor-who/au-torvic-doctor-who"></a> <!--                                 If you want no link delete this -->                     <div class="name">Torvic<p>The Burnt One</p></div><div class="age">???</div><div class="gender">Doctor Who <p>au</p></div><div class="traits"><span>open to canon, canon div. and oc characters</span></div>
+	<div class="description">
+<b>Wanted interactions</b>: Doctor Who characters starting from the 9th era, alien-friendly fandoms, fandoms with sci-fi or supernatural elements (warning: she can only physically harm people she perceives as bad, but in her canon she's semi-hostile to the Doctor and the Master, the extent of it will depend on how threads develop). Has a bg3 bio at @faetorvic.
+<br><b>Open to ship with:</b>  everybody? But she can also come off as "into" people she hates because the line is fuzzy to her.
 
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canondoctorwho merlin modern fallout magical firefly grishaverse dragonage canondiv doctorwho historical marvel xmen dc bg3 yescros au fm ff modern primary>
-      <!-- Add the filters here! Use color1,
-                                                                                                                                                                                                                                                             color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/6b56d33a067cab2eff9b0f5d7241c216/e28c56235ba8931b-2a/s400x600/9becb736621db449db4ddeadaecef0e958ac5a3f.pnj">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/doctor-who/au-torvic-doctor-who"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Torvic
-          <p>The Burnt One</p>
-        </div>
-        <div class="age">???</div>
-        <div class="gender">Doctor Who
-          <p>au</p>
-        </div>
-        <div class="traits"><span>open to canon,
-                                                                                                                                                                                                                                                             canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions:</b>Doctor Who characters starting from the 9th era, alien-friendly fandoms, fandoms with sci-fi or supernatural elements (warning: she can only physically harm people she perceives as bad, but in her canon she's semi-hostile
-          to the Doctor and the Master, the extent of it will depend on how threads develop). Has a bg3 bio at @faetorvic.
-          <br><b>Open to ship with:</b> everybody? But she can also come off as "into" people she hates because the line is fuzzy to her. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 primary canondiv yescros canonffvi ffvi opla xmen dragonage baldursgate marvel grishaverse ouat doctorwho marvel dc lotr ff historical modern magical fallout bridgerton chuck firefly lost turn aroff acefm aceff arofm fm>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/e7f5e5bd4b65978218135826b2c9ce75/dad1e513b979112a-79/s540x810/7f5f95ea69622258633f31e81f121a0e05ea58ac.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/videogames/terra-ff6"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Terra
-          <p>Branford</p>
-        </div>
-        <div class="age">24+</div>
-        <div class="gender">FF6
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span> open to canon, canon divergent and oc characters </span></div>
-        <div class="description"><b>Wanted interactions</b>: ff6, 8, 9, Fallout and other 'end of the world' fandoms, historical/modern fandoms that I know & Doctor Who ( have their full AU verses written), and has <i>adaptations</i> (meaning full blown bios) for One Piece (LA
-          and pre-time skip manga), Dragon Age, Lord of the Rings, Grishaverse, fantasy fandoms, alien-friendly fandoms. <br><b>Open to ship with:</b> Locke, Edward and chemistry-based. She's definitely demiromantic and demisexual with a lot of confusion
-          about how love works. More oriented towards men but can fall for women too if they are her type.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 primary canondiv au yescros canonuntildawn dragonage lost merlin thewitcher firefly untildawn marvel magical tlou telltale doctorwho modern fallout fm ff>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/bcdf38268a27473940b8c45051c90a27/dad1e513b979112a-bc/s540x810/67e1d04436ec6cea22ee3638fbe1a6982153abdf.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/videogames/au-hannah-washington-until-dawn"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Hannah
-          <p>Washington</p>
-        </div>
-        <div class="age">18+</div>
-        <div class="gender">Until Dawn
-          <p>au</p>
-        </div>
-        <div class="traits"><span>open to canon, canon divergent and oc characters</span></div>
-        <div class="description"><b>Wanted interactions</b>: Until Dawn muses (warning: she's *pissed*, check her bio!). Then, with focus on the Found Family trope: Telltale TWD, The Last of Us (show), Fallout, the Witcher, Firefly, and every other fandom you can find in my navi/we
-          already write in.
-          <br><b>Open to ship with:</b> within Until Dawn, Mike, in not *the healthiest of ways*, considering the combo of her being too into him before the prank and bitter now (but still with a soft spot for him), and maybe Chris who wasn't involved
-          in the prank. I will not be pushing for romance regardless of her crushes, obviously! In general, she's mostly attracted to boys/men but I don't exclude some rare girl/woman. If your muse is 30-something and she's 18, at most she'll see them
-          as a parental figure. I'll ship with grown adults only if I'm writing her as a grown woman, which is rare.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 xmen canondragonage modern fallout baldursgate canondiv oc yescros ff fm arofm aroff primary dragonage marvel theboys dc>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/c44a370d36ed3b21ee14b56e59694b9e/dad1e513b979112a-e1/s540x810/f0be140de7e89b8d687f4fc67a23013a15a6275a.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/videogames/solona-dao-xmen"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Solona
-          <p>Amell</p>
-        </div>
-        <div class="age">???</div>
-        <div class="gender">DAO & xMCU
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span> open to canon, canon div. and oc characters </span></div>
-        <div class="description"> <b>Wanted interactions:</b> X-Men, MCU, DC, Dragon Age (can be a follower or the 'human' mage HoF) but read her bio because she's a JOKE character. Fantasy and videogames fandoms too, just remember she's got the 'kill-all' code (click and everybody
-          dies). <br><b>Open to ship with:</b> everyone, though she's demi-romantic.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color1 canonlost lost bridgerton turn dragonage firefly secondary canondiv modern fm historical yescros>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/eab4d7077983943c161329f583d53174/fc06d0a3ae77c7ad-50/s540x810/85152a4dc726843a71feaeed8ca7c0d1e6173107.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/lost/kate-lost" aria-label="muse profile"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Kate
-          <p>Austen</p>
-        </div>
-        <div class="age">27+</div>
-        <div class="gender">Lost
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div>
-        <div class="description"><b>wanted interactions:</b> when it comes to Lost, only with James, Sayid, Claire, Jack, Juliet (if they are okay with my shipping choices) because I don't feel like building more relationship. Also open to all of Lost fantasywritten's muses.
-          But also: crossovers. <br><b>Open to ship with:</b> James/Sawyer and Sayid from Lost, men from other shows.</b>
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canondoctorwho doctorwho nocros oc fm ff modern secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/ae3b7a86675ba5b924b055a8b99c8575/935d6606daad1224-71/s400x600/3fde881fef3d153216d9ec7d8fad275c4192d45b.pnj">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/doctor-who/the-doctors-mother-doctor-who"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">The Mother
-          <p></p>
-        </div>
-        <div class="age">5000+</div>
-        <div class="gender">Doctor Who
-          <p>OC</p>
-        </div>
-        <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"> <b>Wanted interactions:</b> Doctor Who muses from 2005 on. She's the Doctor's biological mother (but I haven't seen classic Who.) 90% a character made just for fun, way overpowered and genuinely confused by humanity but wrapped around her baby's
-          little finger. <br><b>Open to ship with:</b> no idea, she's a Horror.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonfallout fallout canondiv nocros fm primary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/e0ee6591bece76d81e42c7439299c4d3/dad1e513b979112a-8e/s540x810/6950f31b2223a2eca5458224990ddde814d33025.webp">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/fallout-verse/steph-fallout-prime"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Stephanie
-          <p>Harper</p>
-        </div>
-        <div class="age">28</div>
-        <div class="gender">Fallout
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>open to canon, canon divergent and oc characters </span></div>
-        <div class="description"><b>Wanted interactions:</b> Fallout characters from the show and occasional Fallout characters in general IF they are okay with the fact that I know even less than Lucy about the lore, though I'll be very picky about it because I need to know
-          what sort of person they are, understand the places and people they may reference, and so on, before I can feel comfortable writing with them.
-          <br><b>Open to ship with:</b> men. I see her as someone who can absolutely fall in love, given time to see that the other men is in fact a <i>person</i>, especially with guys who have weird interests (Bert and his shoes), innocent/weird ones,
-          or alternatively straight up evil ones if they let her be in charge because she's more than ready to do whatever it takes to get her daughter back.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonfallout fallout canondiv nocros fm secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/d58266e018839ed2edf72cdda99f1e3d/dad1e513b979112a-93/s540x810/190a73a31019976576d659f90f837b501ae34807.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/fallout/lucy-fallout"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Lucy
-          <p>MacLean</p>
-        </div>
-        <div class="age">25+</div>
-        <div class="gender">Fallout
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div>
-        <div class="description"><b>Wanted interactions:</b> Fallout characters from the show and occasional Fallout characters in general IF they are okay with the fact that I know even less than Lucy about the lore, though I'll be very picky about it because I need to know
-          what sort of person they are, understand the places and people they may reference, and so on, before I can feel comfortable writing with them.
-          <br><b>Open to ship with:</b> with Maximus and chemistry based (I don't insta-ship with The Ghoul but I'll ship if it goes there). Right now I see her as straight. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonfallout fallout au nocros fm ff secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/e5a8a2b9ee6b64bdd82d87d17ee2ee55/bbc63b4d6433b47b-d7/s500x750/406b082642754ff26cf6770e119fde01789804c4.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/fallout-verse/lucy-fallout-prime"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Rose
-          <p>MacLean</p>
-        </div>
-        <div class="age">40+</div>
-        <div class="gender">Fallout
-          <p>au</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div>
-        <div class="description"><b>Wanted interactions:</b> Fallout characters from the show and occasional Fallout characters in general, IF they are okay with the fact that I know even less than Lucy about the lore. I'll be very picky about it because I need to know what sort
-          of person they are, understand the places and people they may reference, and so on, before I can feel comfortable writing with them.
-          <br><b>Open to ship with:</b> Lee Moldaver & chemistry-based (bisexual) but keeping in mind she's 45 and not looking at people who are a lot younger than her. Not shipping her with Hank even if I believe she was in love with him before.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canondragonage dragonage thewitcher oc canondiv maybecros fm primary lotr>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/ee4568fc0d478edd9a77244b52788612/dad1e513b979112a-e3/s540x810/498425a1af63bd1614b6eda3dd00cae4acadf8e6.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/videogames/neria-dao"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Neria
-          <p>Surana</p>
-        </div>
-        <div class="age">21+</div>
-        <div class="gender">Dragon Age
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions:</b> Dragon Age, other Heroes of Ferelden (she could be a follower, see her about). Finally, other elf-friendly fandoms as long as her story doesn't have to change (various videogames, the Witcher, Lord of the Rings). She
-          would not interact with blood mages, people who are actively against elves (she'd refuse to talk) and Loghain. <br><b>Open to ship with:</b> male humans and elves (chemistry based) and I'm easily open to ship her with Alistair or Zevran, and
-          Cullen if we go canon divergent in DAO or we write them in DAI.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canondragonage dragonage oc thewitcher canondiv maybecros secondary fm lotr>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/67c134882d3633a933e2f7be926f29bc/dad1e513b979112a-65/s540x810/9e447206605b610e8e347796ffa53a77487358e3.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/videogames/lily-dao"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Lily
-          <p>Tabris</p>
-        </div>
-        <div class="age">21+</div>
-        <div class="gender">Dragon Age
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions:</b> Dragon Age characters. Potentially with other elven-friendly characters too (various videogames, the Witcher, Lord of the Rings). <br><b>Open to ship with:</b> Zevran, Alistair, but also chemistry based, attracted to
-          male elves, humans, Qunari; less likely to date humans if they aren't super sweet/convincing.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonlost lost nocros secondary modern fm ff canondiv>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/df83e428e50dd45020f9ae83e334cd96/dad1e513b979112a-77/s540x810/e104692dcf3bf5db72e8bf478fd76f998b0ed326.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/lost/ana-lucia-lost"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Ana Lucia
-          <p>Cortez</p>
-        </div>
-        <div class="age">29+</div>
-        <div class="gender">Lost
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div>
-        <div class="description"><b>Wanted interactions:</b> only Lost characters. Obviously she doesn't die in season 2. Note: if she doesn't interact with your muse in canon, she won't start interactions here, so if you want to write with her your muse will have to take the
-          first step.
-          <br><b>Open to ship with:</b> chemistry based. She showed an interest in Jack, Sawyer, and had a weird bond with Sayid, but in the unlikely case she lets someone else gets closer to her, I'm open to all possibilities except for dating people
-          who are more than one year younger (she's 29, that's how far she'd go), and Others/ex-Others (she'd never trust them enough after Goodwin).
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonbaldursgate baldursgate nocros primary fm canondiv>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/0eb64b3a93f3279211f0c0f09c162e05/dad1e513b979112a-e5/s540x810/5a830e1d3c883eeb93b2f5ecaa23e62c3c4f2c23.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/videogames/lex-tav-baldurs-gate-3"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Lex
-          <p>(Tav)</p>
-        </div>
-        <div class="age">30+</div>
-        <div class="gender">BG3
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div>
-        <div class="description"> <b>Wanted interactions:</b> BG3 muses that would interact with a 'good' aligned Tav (we can assume an 'accidentally' knocked out Minthara too). I can't interact with Durges yet because I don't want spoilers. As a character she's written around
-          the idea of what leadership would do to her, so she can only be team leader but will interact with oc companions.
-          <br><b>Open to ship with:</b> only Wyll, Gale, a non-ascended Astarion. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canonchuck chuck canondiv maybecros fm modern secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/19db821ad2198a3b9f5f031790bbbb6b/dad1e513b979112a-a2/s540x810/4a09d989dcbd2738971371ca11024758ff3ebadc.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/chuck/ellie-chuck"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Ellie
-          <p>Bartowski W.</p>
-        </div>
-        <div class="age">29+</div>
-        <div class="gender">Chuck
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions:</b> Chuck characters, but can be opened to more if requested by people who know her and have a plot/type of relationship in mind (because all my ideas revolve around Chuck characters). Follows canon but has canon divergent
-          verses where she's involved in the spy world. There is of course the option of having her single to explore other romantic relationships.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 test secondary au yescros historical canonBridgerton bridgerton ff fm>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/f2e973133cf1df87b809aa9b7faef63c/dad1e513b979112a-2b/s540x810/a4fe86af20ad77d311cae0804181a8a771fe9bf2.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/bridgerton/au-cressida-bridgerton"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Cressida
-          <p>Cowper</p>
-        </div>
-        <div class="age">20+</div>
-        <div class="gender">Bridgerton
-          <p>au</p>
-        </div>
-        <div class="traits"><span> selective, open to *some* canon, canon div. and ocs </span></div>
-        <div class="description"><b>Wanted interactions</b>: tvshow Bridgerton muses, but also she's AU: she's kicked out by her family and stays with the Bridgerton before looking for a job, so she can be open to characters from other fandoms once she moves out of the estate.
-          <br><b>Open to ship with:</b> men (especially Bridgertons of age) and potentially women, but not Eloise. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 secondary oc yescros canonfallout canonBridgerton everything bridgerton historical fallout modern turn fm>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/6b0b2b58e29a4c999607d67cc4dcce31/fc06d0a3ae77c7ad-a1/s540x810/7dc4e6c83afac878390e59edd68bd49afe1a4b70.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/oc/rosa-santiago-oc-bridgerton-fallout-oc"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Rosa
-          <p>Santiago A.</p>
-        </div>
-        <div class="age">42</div>
-        <div class="gender">Multifandom
-          <p>oc</p>
-        </div>
-        <div class="traits"><span>open to canon, canon div. and oc characters </span></div>
-        <div class="description"><b>Wanted interactions</b>: tvshow Bridgerton muses or from Benedict's book, historical muses who can crossover, Fallout Prime, some from Fallout 3 and 4, modern verses including Marvel.
-          <br><b>Open to ship with:</b> men for now, chemistry-based but good luck getting commitment. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canonchuck chuck canondiv maybecros modern fm ff secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/744114a2966097b9b1caaf4a80bc757a/dad1e513b979112a-e1/s540x810/fec89b0ed4f225da004bc56e5d483b306fa67371.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/chuck/alex-chuck"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Alex
-          <p>McHugh</p>
-        </div>
-        <div class="age">24+</div>
-        <div class="gender">Chuck
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions:</b> Chuck characters, but can be opened to more if requested by people who know her and have a plot/type of relationship in mind (because all my ideas revolve around Chuck characters).<br> <b>Open to ship with:</b> anyone
-          around her age. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color4 canondoctorwho doctorwho nocros au test fm ff modern secondary test>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/9b56fac3150b7946ac4694a81e0d024a/dad1e513b979112a-d5/s540x810/275c8fd0f62848e0af9adc66c80a7e991b94c78c.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/doctor-who/au-ruby-doctor-who"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Ruby
-          <p>Sunday</p>
-        </div>
-        <div class="age">19+</div>
-        <div class="gender">Doctor Who
-          <p>AU</p>
-        </div>
-        <div class="traits"><span>open only to *a few* canon and canon div. characters</span></div>
-        <div class="description"> <b>Wanted interactions:</b> wanted interactions: the Doctor (but I don't know how to avoid a paradox if she meets previous versions) and <i>cautiously</i> more Doctor Who characters, while Ruby is either having some alien-ish adventures of her
-          own or is back with the Doctor, but due to the nature of her au always after her first season.
-          <br><b>Open to ship with:</b> boys and girls but NOT the Doctor unless she's written as older.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color1 canonlotr lotr canondiv maybecros fm lowactivity dragonage test>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/e6c7fe5da0298a2b3b5c4ceefd79c873/dad1e513b979112a-c5/s540x810/a8cfa508b217e55b94478aecd4ce870132e70b3b.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/misc/tauriel-the-hobbit"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Tauriel
-          <p>of Mirkwood</p>
-        </div>
-        <div class="age">600+</div>
-        <div class="gender">The Hobbit
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions:</b> for now only muses from the Lord of the Rings and The Hobbit movies, until I figure out how she'd interact with others. Also, maybe, Dragon Age if other roleplayers are interested.
-          <br><b>Open to ship with:</b> people she has chemistry with, particularly Legolas (while she'll repress it because not worthy at the very least until the end of the events of The Hobbit). Open to ship with Kili too but only if we write their
-          relationship developing in time and it works, since by default I write her as platonically caring for him.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color1 canonmarvel marvel sitcoms dc au yescros modern fm secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/cb7a81dd2cd969950640b1949ef08430/dad1e513b979112a-60/s540x810/43a3926ae3778deb76788155f8121318c1c71d72.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/x-menmarveldc/au-jemma-aos"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Jemma S.
-          <p>(chitauri AU)</p>
-        </div>
-        <div class="age">28+</div>
-        <div class="gender">AoS
-          <p>AU</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div>
-        <div class="description"><b>Wanted interactions:</b> Fitz, Daisy, Coulson, May, Hunter, Lincoln, Mace, Jiaying, and see page for canon divergent Ward & Deke. On a case by case for other agents who were in the first 3 seasons and a few canon characters from Marvel, DC
-          sci-fi/superheroes shows. If you can make it work with an alien in your universe also open to various sitcoms/modern tvshows. Occasionally I'll write her with original characters and canon ones that I don't know yet if we are rp partners and
-          you think your muse would work well with her. She would not interact with: Hydra members, canon compliant Ward, bad guys in general. <br><b>Open to ship with:</b> men who aren't Coulson or Mack.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color4 canonthehundred thehundred nocros fm ff canondiv lowactivity>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/3db25eb4781d2c9c4451dcd7f7615ea7/dad1e513b979112a-31/s540x810/9a177bbad13268a6341b61329652606b4e721760.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/misc/clarke-the-100"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Clarke
-          <p>Griffin</p>
-        </div>
-        <div class="age">23+</div>
-        <div class="gender">the 100
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>open only to *a few* canon and canon div. characters</span></div>
-        <div class="description"> <b>Wanted interactions:</b> Open to all of The 100 fantasywritten's muses. But besides that my inspiration for her and her show is basically gone except when it comes to rewriting her story with Bellamy (romantic or platonic) and Murphy because
-          I've always had fun with Murphy rpers and what we came up with. <br><b>Open to ship with:</b> Bellamy and Murphy. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 bg3 bridgerton historical chuck doctorwho dragonage fallout firefly ffvi grishaverse lost lotr nofandom marvel merlin ouat modern the100 dc thewitcher turn oc yescros fm secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/73d9d31c76d1a5c165a2f0d91151b74a/dad1e513b979112a-da/s540x810/42de56265aa0964ddabb5e10ab4c48a0cfb79e23.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/oc/stella-ocfandomless"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Stella
-          <p>The Conartist</p>
-        </div>
-        <div class="age">23+</div>
-        <div class="gender">fandomless
-          <p>oc</p>
-        </div>
-        <div class="traits"><span> open to canon, canon divergent and oc characters </span></div>
-        <div class="description"><b>Wanted interactions:</b> All fandoms I know. May require plotting since she's an OC.
-          <br><b>Open to ship with:</b> men (but really, despite her being a criminal, only NICE men) </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-
-
-	  
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color1 test secondary canondiv maybecros doctorwho firefly canonfirefly fm>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/7d257d8044d40d17f03502cd55d0faca/bd65b9d54adc4d81-87/s540x810/0db83d85867993a5748991cebd0d2e4a566a80dc.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/misc/zoe-firefly"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Zoe
-          <p>Washburn</p>
-        </div>
-        <div class="age">33+</div>
-        <div class="gender">Firefly
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>selective, open to canon, canon div. and ocs </span></div>
-        <div class="description"><b>Wanted interactions</b>: for now only firefly muses (including ocs I can see her working with and muses who have a firefly verse) and Doctor Who muses from new who. <br><b>Open to ship with:</b> Wash only, if the Wash rper ships it. Other Firefly
-          canon characters are strictly brotps to me. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 primary canondiv nocros canonopla opla fm>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/5d1aa39931639ccf9014b514c8185e02/bd65b9d54adc4d81-a4/s540x810/062ac9a37bfc7e99d024993cc2b4e3af192a0113.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/misc/nami-oplay"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Nami
-          <p>Cat Burglar</p>
-        </div>
-        <div class="age">20+</div>
-        <div class="gender">OPLA
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>selective, open to canon, canon div. and ocs </span></div>
-        <div class="description"><b>Wanted interactions</b>: Wanted interactions: live action characters and manga characters until we reach the timeskip (still reading), BUT with a preference for either main characters or ocs, because I may be terrible at remembering some of
-          the 'smaller' roles and guess how she interacts with them. <br><b>Open to ship with:</b> Sanji in general and maybe opla!Zoro if threads go there. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color4 test lowactivity canondiv nocros historical canonBridgerton bridgerton fm>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/1b120adb1d10c4fe1ab8dbff7da4d99a/dad1e513b979112a-e9/s540x810/4e2e7dc6fd00cb457eca1b922b3b02ebd5cfcf44.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/bridgerton/eloise-bridgerton"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Eloise
-          <p>Bridgerton</p>
-        </div>
-        <div class="age">19+</div>
-        <div class="gender">Bridgerton
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span> open only to *a few* canon and canon div. characters </span></div>
-        <div class="description"><b>Wanted interactions</b>: family members, their spouses, Cressida and the few "non-family member" muses I already write with, because it turns out my interest only lays there and she already has my oc John to ship her with. <br><b>Open to ship with:</b>          her future husband in this blog is my John (the footman). </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonbridgerton bridgerton au nocros fm lowactivity test>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/0f53091638d21bb200a9075ea9c9e0ca/042390b1be8d5caf-89/s250x400/0a2d418091b872f739ff83d775037052d58ff762.pnj">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/bridgerton/au-footman-john-bridgerton"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Footman John
-          <p></p>
-        </div>
-        <div class="age">27+</div>
-        <div class="gender">Bridgerton
-          <p>au</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and oc characters</span></div>
-        <div class="description"> <b>Wanted interactions:</b> Bridgerton muses. He is my Eloise's future husband when interacting with non-Eloises muses, as in they are in love and being stupid due to class difference.
-          <br><b>Open to ship with:</b> Eloise (mine but also will be Eloise-romantic, but I won't be *expecting* to ship since this is all in my head.)
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 maybecros canonchuck canondiv chuck fm lowactivity>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/6382db1c002ab5554e16d18e1d03b6ec/dad1e513b979112a-ad/s540x810/5d42fb1a52a962d43b87c1fc2136d90a301f7f91.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/chuck/sarah-chuck" aria-label="muse profile"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Sarah W.
-          <p>[HIATUS]</p>
-        </div>
-        <div class="age">25+</div>
-        <div class="gender">Chuck
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>open to canon, canon divergent and oc characters </span></div>
-        <div class="description"><b>Wanted interactions:</b> [HIATUS due to lack of inspiration] Chuck characters, characters from Marvel/DC (see rules), Lost, most sitcoms, most dramas, sci-fi/fantasy, this will be a 'like her I'm interested post and I'll give you a list of
-          who she'd interact with' situation. Has already a Marvel, DC and Shadow and Bone verse. More fantasy ones to be added soon.
-          <br><b>Open to ship with:</b> Chuck is a given. For other people it depends on chemistry but I see her as straight. Casey too if we rewrite canon. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 au secondary nocros canonfallout fallout ff fm>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/3a4ebd5bb7067dc30b31dfceb27eecb2/bd65b9d54adc4d81-6b/s540x810/f93676ee9119a129ce52c015f4514c60c2ddb739.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/videogames/leaau-shaun-fallout-4"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Lea
-          <p>shaun au</p>
-        </div>
-        <div class="age">25+</div>
-        <div class="gender">fallout 4
-          <p>au</p>
-        </div>
-        <div class="traits"><span>selective, open to canon, canon div. and ocs </span></div>
-        <div class="description"><b>Wanted interactions</b>: fallout 4 characters and fallout prime show. <br><b>Open to ship with:</b> unclear at this time. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-  </section>
-  <div id="credit"><a href="https://retrcmoon.tumblr.com/" title="made by retrcmoon"><i class="fa fa-diamond" aria-hidden="true"></i></a></div>
-  <!-- DO NOT DELETE-->
+
+	
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->             
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                     
+<filter color2 primary canondiv yescros canonffvi ffvi opla xmen dragonage baldursgate marvel grishaverse ouat doctorwho marvel dc lotr ff historical modern magical fallout bridgerton chuck firefly lost turn aroff acefm aceff arofm fm> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/e7f5e5bd4b65978218135826b2c9ce75/dad1e513b979112a-79/s540x810/7f5f95ea69622258633f31e81f121a0e05ea58ac.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/videogames/terra-ff6"></a> <!--                                 If you want no link delete this -->                     <div class="name">Terra <p>Branford</p></div><div class="age">24+</div><div class="gender">FF6 <p>canon div</p></div><div class="traits"><span> open to canon, canon divergent and oc characters  </span></div><div class="description"><b>Wanted interactions</b>: ff6, 8, 9, Fallout and other 'end of the world' fandoms, historical/modern fandoms that I know & Doctor Who ( have their full AU verses written), and has <i>adaptations</i> (meaning full blown bios) for One Piece (LA and pre-time skip manga), Dragon Age, Lord of the Rings, Grishaverse, fantasy fandoms, alien-friendly fandoms.  
+<br><b>Open to ship with:</b> Locke, Edward and chemistry-based. She's definitely demiromantic and demisexual with a lot of confusion about how love works. More oriented towards men but can fall for women too if they are her type.  
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                           
+
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                     
+<filter color2 primary canondiv au yescros canonuntildawn dragonage lost merlin thewitcher firefly untildawn marvel magical tlou telltale doctorwho modern fallout fm ff> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/bcdf38268a27473940b8c45051c90a27/dad1e513b979112a-bc/s540x810/67e1d04436ec6cea22ee3638fbe1a6982153abdf.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/videogames/au-hannah-washington-until-dawn"></a> <!--                                 If you want no link delete this -->                     <div class="name">Hannah<p>Washington</p></div><div class="age">18+</div><div class="gender">Until Dawn <p>au</p></div><div class="traits"><span>open to canon, canon divergent and oc characters</span></div><div class="description"><b>Wanted interactions</b>: Until Dawn muses (warning: she's *pissed*, check her bio!). Then, with focus on the Found Family trope: Telltale TWD, The Last of Us (show), Fallout, the Witcher, Firefly, and every other fandom you can find in my navi/we already write in.
+<br><b>Open to ship with:</b> within Until Dawn, Mike, in not *the healthiest of ways*, considering the combo of her being too into him before the prank and bitter now (but still with a soft spot for him), and maybe Chris who wasn't involved in the prank. I will not be pushing for romance regardless of her crushes, obviously! In general, she's mostly attracted to boys/men but I don't exclude some rare girl/woman. If your muse is 30-something and she's 18, at most she'll see them as a parental figure. I'll ship with grown adults only if I'm writing her as a grown woman, which is rare.  
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                           
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color2 xmen canondragonage modern fallout baldursgate canondiv oc yescros ff fm arofm aroff primary dragonage marvel theboys dc> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/c44a370d36ed3b21ee14b56e59694b9e/dad1e513b979112a-e1/s540x810/f0be140de7e89b8d687f4fc67a23013a15a6275a.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/videogames/solona-dao-xmen"></a> <!--                                 If you want no link delete this -->                     <div class="name">Solona<p>Amell</p></div><div class="age">???</div><div class="gender">DAO & xMCU <p>canon div</p></div><div class="traits"><span> open to canon, canon div. and oc characters </span></div><div class="description">
+
+<b>Wanted interactions:</b> X-Men, MCU, DC, Dragon Age (can be a follower or the 'human' mage HoF) but read her bio because she's a JOKE character. Fantasy and videogames fandoms too, just remember she's got the 'kill-all' code (click and everybody dies). 
+
+<br><b>Open to ship with:</b> everyone, though she's demi-romantic. 
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->        
+
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                 
+	
+	<filter color1 canonlost lost  bridgerton turn dragonage firefly secondary canondiv modern fm historical yescros> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/eab4d7077983943c161329f583d53174/fc06d0a3ae77c7ad-50/s540x810/85152a4dc726843a71feaeed8ca7c0d1e6173107.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/lost/kate-lost" aria-label="muse profile"></a> <!--                                 If you want no link delete this -->                     <div class="name">Kate <p>Austen</p></div><div class="age">27+</div><div class="gender">Lost<p>canon div</p></div><div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div><div class="description"><b>wanted interactions:</b> when it comes to Lost, only with James, Sayid, Claire, Jack, Juliet (if they are okay with my shipping choices) because I don't feel like building more relationship. Also open to all of Lost fantasywritten's muses. But also: crossovers. 
+<br><b>Open to ship with:</b> James/Sawyer and Sayid from Lost, men from other shows.</b> 
+
+</div></muse></filter>                             
+
+
+<!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                  
+	
+	
+
+    
+    
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color3 canondoctorwho doctorwho nocros oc fm ff modern secondary> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/ae3b7a86675ba5b924b055a8b99c8575/935d6606daad1224-71/s400x600/3fde881fef3d153216d9ec7d8fad275c4192d45b.pnj">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/doctor-who/the-doctors-mother-doctor-who"></a> <!--                                 If you want no link delete this -->                     <div class="name">The Mother<p></p></div><div class="age">5000+</div><div class="gender">Doctor Who <p>OC</p></div><div class="traits"><span>open to canon, canon div. and oc characters</span></div><div class="description">
+<b>Wanted interactions:</b> Doctor Who muses from 2005 on. She's the Doctor's biological mother (but I haven't seen classic Who.) 90% a character made just for fun, way overpowered and genuinely confused by humanity but wrapped around her baby's little finger. 
+
+
+<br><b>Open to ship with:</b> no idea, she's a Horror.  
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->             
+
+	
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->             <filter color3 canonfallout fallout canondiv nocros fm primary> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/e0ee6591bece76d81e42c7439299c4d3/dad1e513b979112a-8e/s540x810/6950f31b2223a2eca5458224990ddde814d33025.webp">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/fallout-verse/steph-fallout-prime"></a> <!--                                 If you want no link delete this -->                     <div class="name">Stephanie<p>Harper</p></div><div class="age">28</div><div class="gender">Fallout <p>canon div</p></div><div class="traits"><span>open to canon, canon divergent and oc characters </span></div><div class="description"><b>Wanted interactions:</b> Fallout characters from the show and occasional Fallout characters in general IF they are okay with the fact that I know even less than Lucy about the lore, though I'll be very picky about it because I need to know what sort of person they are, understand the places and people they may reference, and so on, before I can feel comfortable writing with them.
+
+<br><b>Open to ship with:</b> men. I see her as someone who can absolutely fall in love, given time to see that the other men is in fact a <i>person</i>, especially with guys who have weird interests (Bert and his shoes), innocent/weird ones, or alternatively straight up evil ones if they let her be in charge because she's more than ready to do whatever it takes to get her daughter back.   
+    
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->       
+
+
+    
+           
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->             <filter color3 canonfallout fallout canondiv nocros fm secondary> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/d58266e018839ed2edf72cdda99f1e3d/dad1e513b979112a-93/s540x810/190a73a31019976576d659f90f837b501ae34807.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/fallout/lucy-fallout"></a> <!--                                 If you want no link delete this -->                     <div class="name">Lucy<p>MacLean</p></div><div class="age">25+</div><div class="gender">Fallout <p>canon div</p></div><div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div><div class="description"><b>Wanted interactions:</b> Fallout characters from the show and occasional Fallout characters in general IF they are okay with the fact that I know even less than Lucy about the lore, though I'll be very picky about it because I need to know what sort of person they are, understand the places and people they may reference, and so on, before I can feel comfortable writing with them.
+
+<br><b>Open to ship with:</b> with Maximus and chemistry based (I don't insta-ship with The Ghoul but I'll ship if it goes there). Right now I see her as straight.
+    
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->       
+
+
+
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->             <filter color3 canonfallout fallout au nocros fm ff secondary> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/e5a8a2b9ee6b64bdd82d87d17ee2ee55/bbc63b4d6433b47b-d7/s500x750/406b082642754ff26cf6770e119fde01789804c4.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/fallout-verse/lucy-fallout-prime"></a> <!--                                 If you want no link delete this -->                     <div class="name">Rose<p>MacLean</p></div><div class="age">40+</div><div class="gender">Fallout <p>au</p></div><div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div><div class="description"><b>Wanted interactions:</b> Fallout characters from the show and occasional Fallout characters in general, IF they are okay with the fact that I know even less than Lucy about the lore. I'll be very picky about it because I need to know what sort of person they are, understand the places and people they may reference, and so on, before I can feel comfortable writing with them.
+
+<br><b>Open to ship with:</b> Lee Moldaver & chemistry-based (bisexual) but keeping in mind she's 45 and not looking at people who are a lot younger than her. Not shipping her with Hank even if I believe she was in love with him before. 
+    
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->       
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color2 canondragonage dragonage thewitcher oc canondiv maybecros fm primary lotr> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/ee4568fc0d478edd9a77244b52788612/dad1e513b979112a-e3/s540x810/498425a1af63bd1614b6eda3dd00cae4acadf8e6.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/videogames/neria-dao"></a> <!--                                 If you want no link delete this -->                     <div class="name">Neria<p>Surana</p></div><div class="age">21+</div><div class="gender">Dragon Age <p>canon div</p></div><div class="traits"><span>open to canon, canon div. and oc characters</span></div><div class="description"><b>Wanted interactions:</b>  Dragon Age, other Heroes of Ferelden (she could be a follower, see her about). Finally, other elf-friendly fandoms as long as her story doesn't have to change (various videogames, the Witcher, Lord of the Rings). She would not interact with blood mages, people who are actively against elves (she'd refuse to talk) and Loghain. 
+
+<br><b>Open to ship with:</b> male humans and elves (chemistry based) and I'm easily open to ship her with Alistair or Zevran, and Cullen if we go canon divergent in DAO or we write them in DAI. 
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                       
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color2 canondragonage dragonage oc thewitcher canondiv maybecros secondary fm lotr> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/67c134882d3633a933e2f7be926f29bc/dad1e513b979112a-65/s540x810/9e447206605b610e8e347796ffa53a77487358e3.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/videogames/lily-dao"></a> <!--                                 If you want no link delete this -->                     <div class="name">Lily<p>Tabris</p></div><div class="age">21+</div><div class="gender">Dragon Age <p>canon div</p></div><div class="traits"><span>open to canon, canon div. and oc characters</span></div><div class="description"><b>Wanted interactions:</b>  Dragon Age characters. Potentially with other elven-friendly characters too (various videogames, the Witcher, Lord of the Rings).
+
+
+<br><b>Open to ship with:</b> Zevran, Alistair, but also chemistry based, attracted to male elves, humans, Qunari; less likely to date humans if they aren't super sweet/convincing. 
+
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                             
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color3 canonlost lost nocros  secondary modern fm ff canondiv> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/df83e428e50dd45020f9ae83e334cd96/dad1e513b979112a-77/s540x810/e104692dcf3bf5db72e8bf478fd76f998b0ed326.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/lost/ana-lucia-lost"></a> <!--                                 If you want no link delete this -->                     <div class="name">Ana Lucia<p>Cortez</p></div><div class="age">29+</div><div class="gender">Lost <p>canon div</p></div><div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div><div class="description"><b>Wanted interactions:</b>  only Lost characters. Obviously she doesn't die in season 2. Note: if she doesn't interact with your muse in canon, she won't start interactions here, so if you want to write with her your muse will have to take the first step.
+
+
+<br><b>Open to ship with:</b> chemistry based. She showed an interest in Jack, Sawyer, and had a weird bond with Sayid, but in the unlikely case she lets someone else gets closer to her, I'm open to all possibilities except for dating people who are more than one year younger (she's 29, that's how far she'd go), and Others/ex-Others (she'd never trust them enough after Goodwin). 
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                   
+                                  
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                      
+<filter color3 canonbaldursgate baldursgate nocros primary fm canondiv> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/0eb64b3a93f3279211f0c0f09c162e05/dad1e513b979112a-e5/s540x810/5a830e1d3c883eeb93b2f5ecaa23e62c3c4f2c23.png">  <!--                                 Muse Picture. can be a gif or static pic -->                  
+<a href="https://sites.google.com/view/savingthrcw/muses/videogames/lex-tav-baldurs-gate-3"></a> <!--                                 If you want no link delete this -->                     <div class="name">Lex<p>(Tav)</p></div><div class="age">30+</div><div class="gender">BG3 <p>canon div</p></div><div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div><div class="description">
+<b>Wanted interactions:</b> BG3 muses that would interact with a 'good' aligned Tav (we can assume an 'accidentally' knocked out Minthara too). I can't interact with Durges yet because I don't want spoilers. As a character she's written around the idea of what leadership would do to her, so she can only be team leader but will interact with oc companions.
+<br><b>Open to ship with:</b> only Wyll, Gale, a non-ascended Astarion. 
+
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->        
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color2 canonchuck chuck canondiv maybecros fm  modern secondary> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                    
+<muse><img src="https://64.media.tumblr.com/19db821ad2198a3b9f5f031790bbbb6b/dad1e513b979112a-a2/s540x810/4a09d989dcbd2738971371ca11024758ff3ebadc.png">  
+<!--                                 Muse Picture. can be a gif or static pic -->     <a href="https://sites.google.com/view/savingthrcw/muses/chuck/ellie-chuck"></a> <!--                                 If you want no link delete this -->                     <div class="name">Ellie<p>Bartowski W.</p></div><div class="age">29+</div><div class="gender">Chuck <p>canon div</p></div><div class="traits"><span>open to canon, canon div. and oc characters</span></div><div class="description"><b>Wanted interactions:</b> Chuck characters, but can be opened to more if requested by people who know her and have a plot/type of relationship in mind (because all my ideas revolve around Chuck characters). Follows canon but has canon divergent verses where she's involved in the spy world. There is of course the option of having her single to explore other romantic relationships. 
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                              
+
+
+
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                     
+<filter color2 test secondary au yescros historical canonBridgerton bridgerton ff fm> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/f2e973133cf1df87b809aa9b7faef63c/dad1e513b979112a-2b/s540x810/a4fe86af20ad77d311cae0804181a8a771fe9bf2.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/bridgerton/au-cressida-bridgerton"></a> <!--                                 If you want no link delete this -->                     <div class="name">Cressida <p>Cowper</p></div><div class="age">20+</div><div class="gender">Bridgerton <p>au</p></div><div class="traits"><span> selective, open to *some* canon, canon div. and ocs  </span></div><div class="description"><b>Wanted interactions</b>: tvshow Bridgerton muses, but also she's AU: she's kicked out by her family and stays with the Bridgerton before looking for a job, so she can be open to characters from other fandoms once she moves out of the estate.
+<br><b>Open to ship with:</b> men (especially Bridgertons of age) and potentially women, but not Eloise.
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->         
+
+
+
+     
+
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                     
+<filter color2 secondary oc yescros canonfallout canonBridgerton everything bridgerton  historical  fallout modern  turn fm> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/6b0b2b58e29a4c999607d67cc4dcce31/fc06d0a3ae77c7ad-a1/s540x810/7dc4e6c83afac878390e59edd68bd49afe1a4b70.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/oc/rosa-santiago-oc-bridgerton-fallout-oc"></a> <!--                                 If you want no link delete this -->                     <div class="name">Rosa <p>Santiago A.</p></div><div class="age">42</div><div class="gender">Multifandom <p>oc</p></div><div class="traits"><span>open to canon, canon div. and oc characters  </span></div><div class="description"><b>Wanted interactions</b>: tvshow Bridgerton muses or from Benedict's book, historical muses who can crossover, Fallout Prime, some from Fallout 3 and 4, modern verses including Marvel. 
+<br><b>Open to ship with:</b> men for now, chemistry-based but good luck getting commitment.
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                           
+
+
+                             
+     
+
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color2 canonchuck chuck canondiv maybecros modern fm ff secondary> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/744114a2966097b9b1caaf4a80bc757a/dad1e513b979112a-e1/s540x810/fec89b0ed4f225da004bc56e5d483b306fa67371.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/chuck/alex-chuck"></a> <!--                                 If you want no link delete this -->                     <div class="name">Alex<p>McHugh</p></div><div class="age">24+</div><div class="gender">Chuck <p>canon div</p></div><div class="traits"><span>open to canon, canon div. and oc characters</span></div><div class="description"><b>Wanted interactions:</b> Chuck characters, but can be opened to more if requested by people who know her and have a plot/type of relationship in mind (because all my ideas revolve around Chuck characters).<br>
+<b>Open to ship with:</b> anyone around her age.
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                             
+
+                                       
+     
+
+    
+    
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color4 canondoctorwho doctorwho nocros au test fm ff modern secondary test> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/9b56fac3150b7946ac4694a81e0d024a/dad1e513b979112a-d5/s540x810/275c8fd0f62848e0af9adc66c80a7e991b94c78c.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/doctor-who/au-ruby-doctor-who"></a> <!--                                 If you want no link delete this -->                     <div class="name">Ruby<p>Sunday</p></div><div class="age">19+</div><div class="gender">Doctor Who <p>AU</p></div><div class="traits"><span>open only to *a few* canon and canon div. characters</span></div><div class="description">
+<b>Wanted interactions:</b> wanted interactions: the Doctor (but I don't know how to avoid a paradox if she meets previous versions) and <i>cautiously</i> more Doctor Who characters, while Ruby is either having some alien-ish adventures of her own or is back with the Doctor, but due to the nature of her au always after her first season.
+
+
+<br><b>Open to ship with:</b> boys and girls but NOT the Doctor unless she's written as older.
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                             
+
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color1 canonlotr lotr canondiv maybecros fm lowactivity dragonage test> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/e6c7fe5da0298a2b3b5c4ceefd79c873/dad1e513b979112a-c5/s540x810/a8cfa508b217e55b94478aecd4ce870132e70b3b.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/misc/tauriel-the-hobbit"></a> <!--                                 If you want no link delete this -->                     <div class="name">Tauriel<p></p></div><div class="age">600+</div><div class="gender">The Hobbit<p>canon div</p></div><div class="traits"><span>selective, open to *some* canon, canon div. and oc characters</span></div><div class="description"><b>Wanted interactions:</b> for now only muses from the Lord of the Rings and The Hobbit movies, until I figure out how she'd interact with others. Also, maybe, Dragon Age if other roleplayers are interested.
+
+<br><b>Open to ship with:</b>  people she has chemistry with, particularly Legolas (while she'll repress it because not worthy at the very least until the end of the events of The Hobbit). Open to ship with Kili too but only if we write their relationship developing in time and it works, since by default I write her as platonically caring for him.
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                                 
+    
+    
+
+<!--                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color1 canonmarvel marvel sitcoms dc  au yescros modern fm secondary> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                      <muse><img src="https://64.media.tumblr.com/cb7a81dd2cd969950640b1949ef08430/dad1e513b979112a-60/s540x810/43a3926ae3778deb76788155f8121318c1c71d72.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/x-menmarveldc/au-jemma-aos"></a> <!--                                 If you want no link delete this -->                     <div class="name">Chitauri!Jemma S.<p></p></div><div class="age">28+</div><div class="gender">AoS <p>AU</p></div><div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div><div class="description"><b>Wanted interactions:</b>   Fitz, Daisy, Coulson, May, Hunter, Lincoln, Mace, Jiaying, and see page for canon divergent Ward & Deke. On a case by case for other agents who were in the first 3 seasons and a few canon characters from Marvel, DC sci-fi/superheroes shows. If you can make it work with an alien in your universe also open to various sitcoms/modern tvshows. Occasionally I'll write her with original characters and canon ones that I don't know yet if we are rp partners and you think your muse would work well with her. She would not interact with: Hydra members, canon compliant Ward, bad guys in general.   
+
+<br><b>Open to ship with:</b> men who aren't Coulson or Mack. 
+    
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->    
+
+
+
+    
+    
+    
+    
+                                     
+    
+    
+    
+<!--         MUSE BOX STARTS HERE / START COPY -->                                             <filter color4 canonthehundred thehundred nocros fm ff canondiv lowactivity> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/3db25eb4781d2c9c4451dcd7f7615ea7/dad1e513b979112a-31/s540x810/9a177bbad13268a6341b61329652606b4e721760.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/misc/clarke-the-100"></a> <!--                                 If you want no link delete this -->                     <div class="name">Clarke<p>Griffin</p></div><div class="age">23+</div><div class="gender">the 100 <p>canon div</p></div><div class="traits"><span>open only to *a few* canon and canon div. characters</span></div><div class="description">
+
+<b>Wanted interactions:</b>  Open to all of The 100 fantasywritten's muses. But besides that my inspiration for her and her show is basically gone except when it comes to rewriting her story with Bellamy (romantic or platonic) and Murphy because I've always had fun with Murphy rpers and what we came up with. 
+
+
+<br><b>Open to ship with:</b> Bellamy and Murphy. 
+</div></muse></filter>                                
+<!--                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->       
+
+
+
+    
+    
+                                                <!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color2  bg3  bridgerton historical  chuck doctorwho dragonage fallout firefly ffvi grishaverse lost lotr nofandom marvel merlin ouat modern the100 dc  thewitcher turn  oc yescros fm secondary> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/73d9d31c76d1a5c165a2f0d91151b74a/dad1e513b979112a-da/s540x810/42de56265aa0964ddabb5e10ab4c48a0cfb79e23.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/oc/stella-ocfandomless"></a> <!--                                 If you want no link delete this -->                     <div class="name">Stella <p>The Conartist</p></div><div class="age">23+</div><div class="gender">fandomless <p>oc</p></div><div class="traits"><span> open to canon, canon divergent and oc characters  </span></div><div class="description"><b>Wanted interactions:</b> All fandoms I know. May require plotting since she's an OC. 
+<br><b>Open to ship with:</b> men (but really, despite her being a criminal, only NICE men)
+    
+</div></muse></filter>                                 
+
+<!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                    
+
+
+    
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                     
+<filter color1 test secondary canondiv maybecros doctorwho firefly canonfirefly fm> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/7d257d8044d40d17f03502cd55d0faca/bd65b9d54adc4d81-87/s540x810/0db83d85867993a5748991cebd0d2e4a566a80dc.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/misc/zoe-firefly"></a> <!--                                 If you want no link delete this -->                     <div class="name">Zoe <p>Washburn</p></div><div class="age">33+</div><div class="gender">Firefly <p>canon div</p></div><div class="traits"><span>selective, open to canon, canon div. and ocs  </span></div><div class="description"><b>Wanted interactions</b>: for now only firefly muses (including ocs I can see her working with and muses who have a firefly verse) and Doctor Who muses from new who. 
+<br><b>Open to ship with:</b> Wash only, if the Wash rper ships it. Other Firefly canon characters are strictly brotps to me.
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                           
+    
+    
+    
+    
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                     
+<filter color3 primary canondiv nocros canonopla opla fm> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/5d1aa39931639ccf9014b514c8185e02/bd65b9d54adc4d81-a4/s540x810/062ac9a37bfc7e99d024993cc2b4e3af192a0113.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/misc/nami-oplay"></a> <!--                                 If you want no link delete this -->                     <div class="name">Nami <p>Cat Burglar</p></div><div class="age">20+</div><div class="gender">OPLA <p>canon div</p></div><div class="traits"><span>selective, open to canon, canon div. and ocs  </span></div><div class="description"><b>Wanted interactions</b>: Wanted interactions: live action characters and manga characters until we reach the timeskip (still reading), BUT with a preference for either main characters or ocs, because I may be terrible at remembering some of the 'smaller' roles and guess how she interacts with them.
+<br><b>Open to ship with:</b> Sanji in general and maybe opla!Zoro if threads go there. 
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                           
+    
+
+
+	
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                     
+<filter color4 test lowactivity canondiv nocros historical canonBridgerton bridgerton fm> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/1b120adb1d10c4fe1ab8dbff7da4d99a/dad1e513b979112a-e9/s540x810/4e2e7dc6fd00cb457eca1b922b3b02ebd5cfcf44.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/bridgerton/eloise-bridgerton"></a> <!--                                 If you want no link delete this -->                     <div class="name">Eloise <p>Bridgerton</p></div><div class="age">19+</div><div class="gender">Bridgerton <p>canon div</p></div><div class="traits"><span> open only to *a few* canon and canon div. characters </span></div><div class="description"><b>Wanted interactions</b>:  family members, their spouses, Cressida and the few "non-family member" muses I already write with, because it turns out my interest only lays there and she already has my oc John to ship her with. 
+<br><b>Open to ship with:</b> her future husband in this blog is my John (the footman).
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                           
+
+
+	
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color3 canonbridgerton bridgerton au nocros fm lowactivity test> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img 
+src="https://64.media.tumblr.com/0f53091638d21bb200a9075ea9c9e0ca/042390b1be8d5caf-89/s250x400/0a2d418091b872f739ff83d775037052d58ff762.pnj">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/bridgerton/au-footman-john-bridgerton"></a> <!--                                 If you want no link delete this -->                     <div class="name">Footman John<p></p></div><div class="age">27+</div><div class="gender">Bridgerton <p>au</p></div><div class="traits"><span>selective, open to *some* canon, canon div. and oc characters</span></div><div class="description">
+
+<b>Wanted interactions:</b>  Bridgerton muses. He is my Eloise's future husband when interacting with non-Eloises muses, as in they are in love and being stupid due to class difference. 
+
+<br><b>Open to ship with:</b> Eloise (mine but also will be Eloise-romantic, but I won't be *expecting* to ship since this is all in my head.) 
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->                                     
+    
+
+
+	<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                         <filter color2 maybecros canonchuck canondiv fm lowactivity> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/6382db1c002ab5554e16d18e1d03b6ec/dad1e513b979112a-ad/s540x810/5d42fb1a52a962d43b87c1fc2136d90a301f7f91.png">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/chuck/sarah-chuck" aria-label="muse profile"></a> <!--                                 If you want no link delete this -->                     <div class="name">Sarah <p>Walker</p></div><div class="age">25+</div><div class="gender">Chuck <p>canon div</p></div><div class="traits"><span>open to canon, canon divergent and oc characters  </span></div><div class="description"><b>Wanted interactions:</b> [HIATUS due to lack of inspiration] Chuck characters, characters from Marvel/DC (see rules), Lost, most sitcoms, most dramas, sci-fi/fantasy, this will be a 'like her I'm interested post and I'll give you a list of who she'd interact with' situation. Has already a Marvel, DC and Shadow and Bone verse. More fantasy ones to be added soon.
+<br><b>Open to ship with:</b> Chuck is a given. For other people it depends on chemistry but I see her as straight. Casey too if we rewrite canon. 
+    
+</div></muse></filter>                                  
+	
+	
+	
+	<!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->      
+    
+
+
+<!--                                MUSE BOX STARTS HERE / START COPY -->                                                                     
+<filter color3  au secondary nocros canonfallout fallout ff fm> <!--                                Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->                                                       <muse><img src="https://64.media.tumblr.com/3a4ebd5bb7067dc30b31dfceb27eecb2/bd65b9d54adc4d81-6b/s540x810/f93676ee9119a129ce52c015f4514c60c2ddb739.jpg">  <!--                                 Muse Picture. can be a gif or static pic -->                     <a href="https://sites.google.com/view/savingthrcw/muses/videogames/leaau-shaun-fallout-4"></a> <!--                                 If you want no link delete this -->                     <div class="name">Lea <p>shaun au</p></div><div class="age">25+</div><div class="gender">fallout 4 <p>au</p></div><div class="traits"><span>selective, open to canon, canon div. and ocs  </span></div><div class="description"><b>Wanted interactions</b>:  fallout 4 characters and fallout prime show.
+<br><b>Open to ship with:</b> unclear at this time. 
+
+</div></muse></filter>                                       <!--                                MUSE BOX ENDS HERE / END COPY PASTE BELOW-->            
+    
+    
+</section>
+
+
+<div id="credit"><a href="https://retrcmoon.tumblr.com/" title="made by retrcmoon"><i class="fa fa-diamond" aria-hidden="true"></i></a></div> <!--                                DO NOT DELETE-->                     
 </body>
-
 </html>
