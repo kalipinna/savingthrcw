@@ -824,6 +824,10 @@ Everything you add as filter labels you have to add here. Look what you have in 
     sidebar:has(input:checked+label[for='canonChuck'])~section filter:not([canonChuck]),
     sidebar:has(input:checked+label[for='canonDragonAge'])~section filter:not([canonDragonAge]),
     sidebar:has(input:checked+label[for='canonMarvel'])~section filter:not([canonMarvel]),
+    
+    
+ sidebar:has(input:checked+label[for='nofandom'])~section filter:not([nofandom]),
+
     sidebar:has(input:checked+label[for='canonopla'])~section filter:not([canonopla]),
     sidebar:has(input:checked+label[for='canonDoctorWho'])~section filter:not([canonDoctorWho]),
     sidebar:has(input:checked+label[for='canonFFVI'])~section filter:not([canonFFVI]),
@@ -933,12 +937,19 @@ Everything you add as filter labels you have to add here. Look what you have in 
       <!-- FILTER CATEGORY 6 STARTS HERE -->
       <div class="filter">
         <p>Originally from:</p>
-        <div class="filter_links" id="five"><input type="radio" id="allcanonically" name="canonically" checked><label for="allcanonically">multifandom</label><input type="radio" id="canonbaldursgate" name="canonically"><label for="canonbaldursgate">bg3</label><input type="radio" id="canonBridgerton"
-            name="canonically"><label for="canonBridgerton">bridgerton</label><input type="radio" id="canonChuck" name="canonically"><label for="canonChuck">Chuck</label><input type="radio" id="canonDoctorWho" name="canonically"><label for="canonDoctorWho">Doctor Who</label>
+        <div class="filter_links" id="five">
+        <input type="radio" id="allcanonically" name="canonically" checked><label for="allcanonically">all</label>
+         
+        <input type="radio" id="canonbaldursgate" name="canonically"><label for="canonbaldursgate">bg3</label>
+        <input type="radio" id="canonBridgerton"  name="canonically"><label for="canonBridgerton">bridgerton</label>
+        <input type="radio" id="canonChuck" name="canonically"><label for="canonChuck">Chuck</label>
+        <input type="radio" id="canonDoctorWho" name="canonically"><label for="canonDoctorWho">Doctor Who</label>
           <input type="radio" id="canonDragonAge" name="canonically"><label for="canonDragonAge">Dragon Age</label><input type="radio" id="canonFallout" name="canonically"><label for="canonFallout">Fallout</label><input type="radio" id="canonFirefly"
             name="canonically"><label for="canonFirefly">firefly</label>
           <input type="radio" id="canonFFVI" name="canonically"><label for="canonFFVI">FFVI</label><input type="radio" id="canonLost" name="canonically"><label for="canonLost">Lost</label><input type="radio" id="canonLotR" name="canonically"><label for="canonLotR">LotR</label>
           <input type="radio" id="canonMarvel" name="canonically"><label for="canonMarvel">Marvel</label>
+             <input type="radio" id="nofandom" name="canonically"><label for="nofandom">no fandom</label>
+          
           <input type="radio" id="canonopla" name="canonically"><label for="canonopla">la onepiece</label>
           <input type="radio" id="canontheHundred" name="canonically"><label for="canontheHundred">the 100</label>
             <input type="radio" id="canontlou" name="canonically"><label for="canontlou">tlou</label>
@@ -1034,7 +1045,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     <!-- MUSE BOX STARTS HERE / START COPY -->
     <filter color2 primary canondiv au yescros canonuntildawn tlou dragonage lost merlin thewitcher firefly untildawn marvel magical tlou telltale doctorwho modern fallout fm ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/bcdf38268a27473940b8c45051c90a27/dad1e513b979112a-bc/s540x810/67e1d04436ec6cea22ee3638fbe1a6982153abdf.png">
+      <muse><img src="https://64.media.tumblr.com/4411c0ccb0fa2d7541c269e7761a0228/f9954e58cf5bac61-62/s540x810/738546d6f681d0cec14a6a06685f125d963573f6.png">
         <!-- Muse Picture. can be a gif or static pic -->
         <a href="https://tumblr.com/justaprankhan"></a>
         <!-- If you want no link delete this -->
@@ -1368,7 +1379,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     </filter>
     <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 secondary oc yescros canonfallout canonBridgerton everything bridgerton historical fallout modern turn fm>
+    <filter color2 secondary oc yescros canonfallout nofandom canonBridgerton everything bridgerton historical fallout modern turn fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/6b0b2b58e29a4c999607d67cc4dcce31/fc06d0a3ae77c7ad-a1/s540x810/7dc4e6c83afac878390e59edd68bd49afe1a4b70.png">
         <!-- Muse Picture. can be a gif or static pic -->
