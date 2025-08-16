@@ -582,6 +582,14 @@
       text-align: var(--text-align);
       font-size: 13px;
     }
+    
+    h1 a {
+        font-size:20px!important;
+        font-family:times;
+        text-decoration:bold;
+        background-color:yellow;
+    }
+    
     /** COLOR VARAIBLES **/
     
     filter[color1] .age,
@@ -774,7 +782,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     sidebar:has(input:checked+label[for='primary'])~section filter:not([primary]),
     sidebar:has(input:checked+label[for='secondary'])~section filter:not([secondary]),
-    sidebar:has(input:checked+label[for='lowactivity'])~section filter:not([lowactivity]),
+    sidebar:has(input:checked+label[for='tertiary'])~section filter:not([tertiary]),
     sidebar:has(input:checked+label[for='test'])~section filter:not([test]),
     sidebar:has(input:checked+label[for='semiprivate'])~section filter:not([semiprivate]),
     sidebar:has(input:checked+label[for='yescros'])~section filter:not([yescros]),
@@ -855,7 +863,8 @@ Everything you add as filter labels you have to add here. Look what you have in 
   <!-- - HEADER START --->
   <header><span class="lnr lnr-pushpin"></span>
     <div class="links">
-      <!-- This is the sidebar menu replace the links with what you want --><a href="https://savingthrcw.tumblr.com">Home</a><a href="https://sites.google.com/view/savingthrcw/rules">rules and bios</a>
+      <!-- This is the sidebar menu replace the links with what you want --><a href="https://savingthrcw.tumblr.com">Home</a>
+      <h1><a href="https://sites.google.com/view/savingthrcw/rules">rules and bios</a></h1>
       <p>Click on the circle next to the photo for the direct bio!</p>
     </div>
   </header>
@@ -882,7 +891,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
                                                                                                                                                                                                                                                              two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">--><input type="radio" id="allstatus" name="status" checked><label for="allstatus">all</label>
                                                                                                                                                                                                                                                             <input type="radio" id="primary" name="status"><label for="primary">high activity</label>
                                                                                                                                                                                                                                                             <input type="radio" id="secondary" name="status"><label for="secondary">mid activity</label>
- <input type="radio" id="lowactivity" name="status"><label for="lowactivity">low activity</label>
+ <input type="radio" id="tertiary" name="status"><label for="tertiary">low activity</label>
  <input type="radio" id="test" name="status"><label for="test">test</label>
   <input type="radio" id="semiprivate" name="status"><label for="semiprivate">semi private</label></div>
       </div>
@@ -1088,7 +1097,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
           <p>canon div/oc</p>
         </div>
         <div class="traits"><span> open to canon, canon divergent and oc characters </span></div>
-        <div class="description"><b>Wanted interactions</b>: everyone from all of my fandoms. Obviously there is no need to have watched Squid Games because she has an about for everyone else; I mixed her character with my idea for an OC since she canonically only appears for five seconds in the canon show and those seconds fit my idea well. 
+        <div class="description"><b>Wanted interactions</b>: everyone from all of my fandoms. Obviously there is no need to have watched Squid Games because she has an about for everyone else and, most importantly, she was an OC I had in mind that I decided to also overlap with the SG character Mi-na.
         <br><b>Open to ship with:</b> everybody.
         </div>
       </muse>
@@ -1116,9 +1125,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
           <p>AU</p>
         </div>
         <div class="traits"><span>selective,   open to *some* canon,     canon div. and ocs</span></div>
-        <div class="description"><b>Wanted interactions</b>: obviously her father (The Ghoul), Lucy, Max, other tvshow characters, and selectively-speaking ocs and main characters from the games that I know and that I think can work with her, seeing as she's a very particular
-          type of person and I only have vague memories of the game-verse besides fallout 4. Cannot interact with her mother because the thread would immediately end with her killing Barb. <br><b>open to ship with:</b> She's demi-biromantic (takes a lot
-          for her to develop a crush, she's too grumpy) but also ace and very sex repulsed to the point that kissing is stretching it. I won't write her forcing herself to sleep with people even if she might be willing to do so. 
+        <div class="description"><b>Wanted interactions</b>: obviously her father (The Ghoul), Lucy, Max, other tvshow characters and, selectively, ocs and main characters from the games that I think can work with her given how unfriendly she can be. Cannot interact with her mother because she'd kill her. <br><b>open to ship with:</b> She's demi-biromantic, ace and very sex repulsed to the point that kissing is stretching it. I won't write her forcing herself to sleep with people so keep that in mind. 
               
           </div>
       </muse>
@@ -1143,7 +1150,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
           <p>au</p>
         </div>
         <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"><b>wanted interactions</b>: for now only TLOU characters but if people are interested, I'll open her to everyone. Keep in mind that initially she'll hate Joel and Tommy's guts.  <br>
+        <div class="description"><b>wanted interactions</b>: for now only TLOU characters but if people are interested, I'll open her to everyone. Keep in mind that initially she'll hate Joel and Tommy's guts. She has a whole life described in her bio away from them.  <br>
         <b>open to ship with:</b> men.
         </div>
       </muse>
@@ -1207,7 +1214,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color4 semiprivate canondiv canontlou nocros tlou ff>
+    <filter color4 semiprivate secondary test canondiv canontlou nocros tlou ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/b239c5979b14a6ae0345bd175ee2ad6b/f9954e58cf5bac61-15/s540x810/843299bb20d27576ea39b2324686f4853d19ebd3.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1236,7 +1243,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 xmen chuck nineoneone doctorwho ffvi ffviii fvix grishaverse historical lost lotr magical merlin opla modern fallout baldursgate twd  oc yescros ff fm tlou thewitcher primary dragonage marvel theboys dc>
+    <filter color2 secondary xmen chuck nineoneone doctorwho ffvi ffviii fvix grishaverse historical lost lotr magical merlin opla modern fallout baldursgate twd  oc yescros ff fm tlou thewitcher secondary dragonage marvel dc>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/1d6745c69999a7fd12313a49791644fd/f9954e58cf5bac61-f0/s540x810/ea89c7cb7b9da8e017bbaf6df6b208306485810e.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1329,8 +1336,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
           <p>canon div</p>
         </div>
         <div class="traits"><span>open to canon, canon divergent and oc characters </span></div>
-        <div class="description"><b>Wanted interactions:</b> Fallout characters from the show and occasional Fallout characters in general IF they are okay with the fact that I know even less than Lucy about the lore, though I'll be very picky about it because I need to know
-          what sort of person they are, understand the places and people they may reference, and so on, before I can feel comfortable writing with them.
+        <div class="description"><b>Wanted interactions:</b> Fallout characters set in the show and occasional, selectively, Fallout 3-4 characters (see my rules).
           <br><b>Open to ship with:</b> men. I see her as someone who can absolutely fall in love, given time to see that the other men is in fact a <i>person</i>, especially with guys who have weird interests (Bert and his shoes), innocent/weird ones,
           or alternatively straight up evil ones if they let her be in charge because she's more than ready to do whatever it takes to get her daughter back.
         </div>
@@ -1355,7 +1361,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
           <p>canon div</p>
         </div>
         <div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div>
-        <div class="description"><b>Wanted interactions:</b> Fallout characters from the show and occasional Fallout characters in general IF they are okay with the fact that I know even less than Lucy about the lore, though I'll be very picky about it because I need to know what sort of person they are, understand the places and people they may reference, and so on, before I can feel comfortable writing with them.
+        <div class="description"><b>Wanted interactions:</b> Fallout characters set in the show and occasional, selectively, Fallout 3-4 characters (see my rules).
           <br><b>Open to ship with:</b> with Maximus and chemistry based (I don't insta-ship with The Ghoul but I'll ship if it goes there). Right now I see her as straight. </div>
       </muse>
     </filter>
@@ -1379,8 +1385,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
           <p>au</p>
         </div>
         <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions:</b> Fallout characters from the show and occasional Fallout characters in general, IF they are okay with the fact that I know even less than Lucy about the lore. I'll be very picky about it because I need to know what sort
-          of person they are, understand the places and people they may reference, and so on, before I can feel comfortable writing with them.
+        <div class="description"><b>Wanted interactions:</b> Fallout characters set in the show and occasional, selectively, Fallout 3-4 characters (see my rules).
           <br><b>Open to ship with:</b> Lee Moldaver & chemistry-based (bisexual) but keeping in mind she's 45 and not looking at people who are a lot younger than her. Not shipping her with Hank even if I believe she was in love with him before.
         </div>
       </muse>
@@ -1443,7 +1448,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 test canondiv nocros secondary canonsquidgame squidgame ff fm>
+    <filter color3 test canondiv nocros tertiary canonsquidgame squidgame ff fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/28ba569e769c5f46e308e2d778397cba/dad1e513b979112a-b6/s540x810/795c245cb0f37b2c944d0d5501446939550d9383.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1564,33 +1569,6 @@ No Myung-gi unless all you want is hostility that will never end.<br><b>Open to 
     
     
     
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonlost lost nocros secondary modern fm ff canondiv>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/87ba72ca8de8cc8d48283f22f841e5ea/f9954e58cf5bac61-03/s540x810/2d675c98570dc4bd703909f9b29295e5b5d0316e.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/lost/ana-lucia-lost"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Ana Lucia
-          <p>Cortez</p>
-        </div>
-        <div class="age">29+</div>
-        <div class="gender">Lost
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and ocs</span></div>
-        <div class="description"><b>Wanted interactions:</b> only Lost characters. Obviously she doesn't die in season 2. Note: if she doesn't interact with your muse in canon, she won't start interactions here, so if you want to write with her your muse will have to take the
-          first step.
-          <br><b>Open to ship with:</b> chemistry based. She showed an interest in Jack, Sawyer, and had a weird bond with Sayid, but in the unlikely case she lets someone else gets closer to her, I'm open to all possibilities except for dating people
-          who are more than one year younger (she's 29, that's how far she'd go), and Others/ex-Others (she'd never trust them enough after Goodwin).
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    
-    
-    
-    
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
     <filter color3 canonbaldursgate baldursgate nocros primary fm canondiv>
@@ -1622,28 +1600,6 @@ No Myung-gi unless all you want is hostility that will never end.<br><b>Open to 
     
     
     
-    
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonchuck chuck canondiv nocros fm modern secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/898f96a4104da5006b6783a88b9d4518/f9954e58cf5bac61-61/s540x810/1b4fa806accf020330b76cff024873f896de107e.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/chuck/ellie-chuck"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Ellie
-          <p>Bartowski W.</p>
-        </div>
-        <div class="age">29+</div>
-        <div class="gender">Chuck
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions:</b> Chuck characters, but can be opened to more if requested by people who know her and have a plot/type of relationship in mind (because all my ideas revolve around Chuck characters). Follows canon but has canon divergent verses where she's involved in the spy world. There is of course the option of having her single to explore other romantic relationships but she's otherwise with Devon by default.<br>
-        <b>Open to ship with:</b> Devon, Casey, men. 
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
     
     
     
@@ -1677,33 +1633,8 @@ No Myung-gi unless all you want is hostility that will never end.<br><b>Open to 
     
     
     
-    
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canonchuck chuck canondiv maybecros modern fm ff secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/73f5cfbbfcb70752a61876d5107cafe8/f9954e58cf5bac61-f6/s540x810/165de76b4bca9597bcbc804e498e17b31240f73e.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/chuck/alex-chuck"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Alex
-          <p>McHugh</p>
-        </div>
-        <div class="age">24+</div>
-        <div class="gender">Chuck
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions:</b> Chuck characters, but can be opened to more if requested by people who know her and have a plot/type of relationship in mind (because all my ideas revolve around Chuck characters).<br> <b>Open to ship with:</b> anyone around her age. With Morgan a lot of plotting is required. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    
-    
-    
-    
-    
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonmarvel marvel canondiv nocros fm dc doctorwho test primary>
+    <filter color3 canonmarvel marvel canondiv nocros fm dc doctorwho test secondary>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/e81658b5cb99a3c996e35dc8f7e4095a/f9954e58cf5bac61-d3/s540x810/1a11486115a4f3e44580a112bc03320c0dc5098b.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1756,30 +1687,6 @@ No Myung-gi unless all you want is hostility that will never end.<br><b>Open to 
     
     
     
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color1 canonlotr lotr canondiv maybecros fm lowactivity dragonage test>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/0c08ad6f9f94e3ab8d8f46d82f14c857/f9954e58cf5bac61-19/s540x810/18777420edf360ca5006ebc0b46ff527bf8763f1.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/misc/tauriel-the-hobbit"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Tauriel
-          <p>of Mirkwood</p>
-        </div>
-        <div class="age">600+</div>
-        <div class="gender">The Hobbit
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>selective, open to *some* canon, canon div. and oc characters</span></div>
-        <div class="description"><b>SEMI-HIATUS - Wanted interactions:</b> for now only muses from the Lord of the Rings and The Hobbit movies, until I figure out how she'd interact with others. Also, maybe, Dragon Age if other roleplayers are interested.
-          <br><b>Open to ship with:</b> people she has chemistry with, particularly Legolas (while she'll repress it because not worthy at the very least until the end of the events of The Hobbit). Open to ship with Kili too but only if we write their relationship developing from scratch, since by default I write her as platonically caring for him.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    
-    
-    
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
@@ -1812,7 +1719,7 @@ No Myung-gi unless all you want is hostility that will never end.<br><b>Open to 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color4 canonthehundred thehundred nocros fm ff canondiv lowactivity>
+    <filter color4 canonthehundred thehundred nocros fm ff canondiv secondary>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/23cfe9297e0f9d418555b0895becd088/f9954e58cf5bac61-6b/s540x810/0980a13adf89a697094573b641426924eca565c9.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1839,43 +1746,8 @@ No Myung-gi unless all you want is hostility that will never end.<br><b>Open to 
     
     
     
-    
-    
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 baldursgate bridgerton historical chuck doctorwho dragonage fallout firefly ffvi grishaverse lost  nofandom marvel merlin ouat modern the100   turn oc yescros fm secondary>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/4e80cd67e14d2f75f24cad649aa6a3c4/f9954e58cf5bac61-21/s540x810/e49b70eff6458cec00781911574032bd9f2a0870.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/ocs/stella-ocfandomless"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Stella
-          <p>The Conartist</p>
-        </div>
-        <div class="age">23+</div>
-        <div class="gender">fandomless
-          <p>oc</p>
-        </div>
-        <div class="traits"><span> open to canon, canon divergent and oc characters </span></div>
-        <div class="description"><b>Wanted interactions:</b> All fandoms I know. May require plotting since she's an OC.
-          <br><b>Open to ship with:</b> men (but really, despite her being a criminal, only NICE men) </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-
-
-    
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 au secondary nocros canonfallout fallout ff fm>
+    <filter color3 au primary nocros canonfallout fallout ff fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/29823ef09210c2a2848608a844930770/f9954e58cf5bac61-e5/s540x810/f71c69e1a48e146379beadd377fbefc74f834491.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1898,7 +1770,7 @@ No Myung-gi unless all you want is hostility that will never end.<br><b>Open to 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color4 test lowactivity canondiv nocros historical canonBridgerton bridgerton fm>
+    <filter color4 test tertiary canondiv nocros historical canonBridgerton bridgerton fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/4e98921d9c61d90262c9ab36445048b7/f9954e58cf5bac61-2a/s540x810/ce344c67442ef3f7f28cc36c4377ef77caa44c25.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
