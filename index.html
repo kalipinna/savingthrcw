@@ -795,6 +795,7 @@
 
 Everything you add as filter labels you have to add here. Look what you have in the Filter id="" and for="" section you need to add here. Don't use numbers and don't put spaces between words when you use more than one word as filter. A tutorial link can be found on top of the code. **/
     
+    sidebar:has(input:checked+label[for='super'])~section filter:not([super]),
     sidebar:has(input:checked+label[for='primary'])~section filter:not([primary]),
     sidebar:has(input:checked+label[for='secondary'])~section filter:not([secondary]),
     sidebar:has(input:checked+label[for='tertiary'])~section filter:not([tertiary]),
@@ -907,8 +908,10 @@ Everything you add as filter labels you have to add here. Look what you have in 
         <div class="filter_links" id="five">
           <!-- by adding one,
                                                                                                                                                                                                                                                              two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">--><input type="radio" id="allstatus" name="status" checked><label for="allstatus">all</label>
-                                                                                                                                                                                                                                                            <input type="radio" id="primary" name="status"><label for="primary">high activity</label>
-                                                                                                                                                                                                                                                            <input type="radio" id="secondary" name="status"><label for="secondary">mid activity</label>
+                                                                   
+                                                                   <input type="radio" id="super" name="status"><label for="super">super active</label>
+                                                                                                                                                                                                                                                                 <input type="radio" id="primary" name="status"><label for="primary">high activity</label>
+                                                                                                                                                                                                       <input type="radio" id="secondary" name="status"><label for="secondary">mid activity</label>
  <input type="radio" id="tertiary" name="status"><label for="tertiary">low activity</label>
  <input type="radio" id="test" name="status"><label for="test">test</label>
   <input type="radio" id="semiprivate" name="status"><label for="semiprivate">semi private</label></div>
@@ -927,7 +930,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
       <input type="radio" id="maybecros" name="cros"><label for="maybecros">maybe</label></div>
       <br>
       
-      <p style="font-size:12px">       The darker the color, the less open they are. </p>
+      <p style="font-size:12px">       cyan: no crossovers; pink: yes crossovers but very selective; yellow: yes crossovers and yes all characters; violet: no crossovers and very few characters </p>
       </div>
       
      
@@ -1065,7 +1068,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color6 primary canondiv yescros oc au  merlin tlou ffvi Ffviii fvix opla xmen dragonage baldursgate tlou marvel thehundred grishaverse ouat doctorwho  marvel dc lotr  historical modern magical fallout thepitt xmen nineoneone therookie bridgerton chuck twd firefly lost turn  fm>
+    <filter color6 super  canondiv yescros oc au  merlin tlou ffvi Ffviii fvix opla xmen dragonage baldursgate tlou marvel thehundred grishaverse ouat doctorwho  marvel dc lotr  historical modern magical fallout thepitt xmen nineoneone therookie bridgerton chuck twd firefly lost turn  fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/cc14f10a3770d8582cd0965e24b3f322/dad1e513b979112a-1d/s540x810/63a28031e39e476ea9abf5c3962f90e988e5e308.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1090,7 +1093,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 primary canondiv yescros canonffvi squidgame merlin tlou ffvi Ffviii fvix opla xmen dragonage baldursgate tlou marvel grishaverse ouat doctorwho  marvel dc lotr ff historical modern magical fallout bridgerton chuck twd firefly lost turn aroff acefm aceff arofm fm>
+    <filter color2 super  canondiv yescros canonffvi squidgame merlin tlou ffvi Ffviii fvix opla xmen dragonage baldursgate tlou marvel grishaverse ouat doctorwho  marvel dc lotr ff historical modern magical fallout bridgerton chuck twd firefly lost turn aroff acefm aceff arofm fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/77265c2ae676886fa54ad956782cc647/f9954e58cf5bac61-19/s540x810/0550323ab9dad0d5a2ed757f2636bc8e2258a684.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1113,53 +1116,33 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     
-    
-    <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canondoctorwho merlin fallout magical firefly grishaverse dragonage canondiv doctorwho historical marvel xmen twd tlou dc baldursgate yescros au fm ff modern primary>
-      <!-- Add the filters here! Use color1,       color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/c876e7b5079ce8b92a208cef42c9591e/f9954e58cf5bac61-aa/s540x810/1ade475dd9796863e2aad620c191be3b855e64fa.jpg">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/doctor-who/au-torvic-doctor-who"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Torvic
-          <p>The Burnt One</p>
-        </div>
-        <div class="age">???</div>
-        <div class="gender">Doctor Who
-          <p>au</p>
-        </div>
-        <div class="traits"><span>open to canon,   canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions</b>: Doctor Who characters starting from the 9th era, alien-friendly fandoms, BG3, fandoms with apocalyptic (TLOU&TWD) sci-fi or supernatural elements (warning: villain character but she's being forced not to hurt 'good people' by the narrative). 
-          <br><b>Open to ship with:</b> everybody? But she can also come off as "into" people she hates because the line is fuzzy to her. </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
-    
-    
        <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canontwilight twilight merlin fallout magical bridgerton fantasy grishaverse dragonage oc doctorwho historical marvel xmen lotr turn twd tlou dc baldursgate yescros au fm ff modern primary>
-      <!-- Add the filters here! Use color1,       color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/96f7223f97df57151cf4ae331dd4cc47/fc06d0a3ae77c7ad-61/s540x810/e1d009c5c951bd1f1ed6580c6e6e875cd73c5b71.jpg">
+    <filter color2 super canondiv au yescros canondoctorwho tlou  chuck historical magical lost merlin  firefly  marvel magical tlou twd doctorwho modern fallout fm ff>
+      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
+      <muse><img src="https://64.media.tumblr.com/00d0f0b25b9c370c1637d16938fdaae7/f9954e58cf5bac61-62/s540x810/ca802043f5dabf37c55083dd13dc740ed58468d0.png">
         <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://sites.google.com/view/savingthrcw/muses/ocs/inaya-devi-twlight-adjacent-oc"></a>
+        <a href="https://tumblr.com/re-regeneratedanomaly"></a>
         <!-- If you want no link delete this -->
-        <div class="name">Inaya
-          <p>Devi</p>
+        <div class="name">Jenny
+          <p style="font-size:16px">Doctor's Daughter</p>
         </div>
-        <div class="age">100+</div>
-        <div class="gender">Twilight
-          <p>oc</p>
+        <div class="age">50+</div>
+        <div class="gender">doctor who
+          <p>canon div</p>
         </div>
-        <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
-        <div class="description"><b>Wanted interactions</b>: twilight muses, or rpers who can accept the lore I threw in (check my rules about interactions with vampires/werewolves). Also has verses for x-mcu, fallout, twd, tlou, historical ones if you accept magic & more.
-          <br><b>Open to ship with:</b> anyone if there is chemistry (she's a bit on the cold/sad side, 'courting' may be needed). She's usually around 100 years old, but mentally she's more in her early or mid-twenties (this can be subjected to changes) </div>
+        <div class="traits"><span>open to canon, canon divergent and oc characters</span></div>
+        <div class="description"><b>Wanted interactions</b>: Doctor Who muses from 2005 on, and all kinds of crossovers where can still be an alien even if the fandom itself doesn't canonically have them, as long as it's one of the fandoms I write in. Has a verse where she can exist as a genetically modified person for fandoms like Fallout or One Piece.
+          <br><b>Open to ship with:</b> she's bisexual/omnisexual and demiromantic, but the person has to be unambiguously an adult. The only canon companion I can ship is Jack. I won't force it, she's just into flirts, including (older) Amy if she weren't married. 
+        </div>
       </muse>
     </filter>
     <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
+    
+    
     
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 primary canondiv au yescros  tlou dragonage baldursgate bridgerton chuck historical magical lost merlin  thepitt firefly therookie nineoneone xmen thepitt  marvel magical tlou twd doctorwho modern fallout fm ff>
+    <filter color2 super canondiv au yescros  tlou dragonage baldursgate bridgerton chuck historical magical lost merlin  thepitt firefly therookie nineoneone xmen thepitt  marvel magical tlou twd doctorwho modern fallout fm ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/ae2e3e28e8438de96ed81a1d1bba2921/f9954e58cf5bac61-67/s540x810/71d379fc8273c3c202bd85e987205cd9b54e1ec3.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1317,6 +1300,49 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     
+    
+    <!-- MUSE BOX STARTS HERE / START COPY -->
+    <filter color2 canondoctorwho merlin fallout magical firefly grishaverse dragonage canondiv doctorwho historical marvel xmen twd tlou dc baldursgate yescros au fm ff modern primary>
+      <!-- Add the filters here! Use color1,       color2 or color3 for custom/different accent colors -->
+      <muse><img src="https://64.media.tumblr.com/c876e7b5079ce8b92a208cef42c9591e/f9954e58cf5bac61-aa/s540x810/1ade475dd9796863e2aad620c191be3b855e64fa.jpg">
+        <!-- Muse Picture. can be a gif or static pic -->
+        <a href="https://sites.google.com/view/savingthrcw/muses/doctor-who/au-torvic-doctor-who"></a>
+        <!-- If you want no link delete this -->
+        <div class="name">Torvic
+          <p>The Burnt One</p>
+        </div>
+        <div class="age">???</div>
+        <div class="gender">Doctor Who
+          <p>au</p>
+        </div>
+        <div class="traits"><span>open to canon,   canon div. and oc characters</span></div>
+        <div class="description"><b>Wanted interactions</b>: Doctor Who characters starting from the 9th era, alien-friendly fandoms, BG3, fandoms with apocalyptic (TLOU&TWD) sci-fi or supernatural elements (warning: villain character but she's being forced not to hurt 'good people' by the narrative). 
+          <br><b>Open to ship with:</b> everybody? But she can also come off as "into" people she hates because the line is fuzzy to her. </div>
+      </muse>
+    </filter>
+    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
+    
+    
+       <!-- MUSE BOX STARTS HERE / START COPY -->
+    <filter color2 canontwilight twilight merlin fallout magical bridgerton fantasy grishaverse dragonage oc doctorwho historical marvel xmen lotr turn twd tlou dc baldursgate yescros au fm ff modern primary>
+      <!-- Add the filters here! Use color1,       color2 or color3 for custom/different accent colors -->
+      <muse><img src="https://64.media.tumblr.com/96f7223f97df57151cf4ae331dd4cc47/fc06d0a3ae77c7ad-61/s540x810/e1d009c5c951bd1f1ed6580c6e6e875cd73c5b71.jpg">
+        <!-- Muse Picture. can be a gif or static pic -->
+        <a href="https://sites.google.com/view/savingthrcw/muses/ocs/inaya-devi-twlight-adjacent-oc"></a>
+        <!-- If you want no link delete this -->
+        <div class="name">Inaya
+          <p>Devi</p>
+        </div>
+        <div class="age">100+</div>
+        <div class="gender">Twilight
+          <p>oc</p>
+        </div>
+        <div class="traits"><span>open to canon, canon div. and oc characters</span></div>
+        <div class="description"><b>Wanted interactions</b>: twilight muses, or rpers who can accept the lore I threw in (check my rules about interactions with vampires/werewolves). Also has verses for x-mcu, fallout, twd, tlou, historical ones if you accept magic & more.
+          <br><b>Open to ship with:</b> anyone if there is chemistry (she's a bit on the cold/sad side, 'courting' may be needed). She's usually around 100 years old, but mentally she's more in her early or mid-twenties (this can be subjected to changes) </div>
+      </muse>
+    </filter>
+    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
     <filter color4  secondary test canondiv canontwilight maybecros twilight>
@@ -1549,7 +1575,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 test primary canondiv au yescros canonthepit thepitt bridgerton therookie modern marvel nineoneone fm ff>
+    <filter color2 test super canondiv au yescros canonthepit thepitt bridgerton therookie modern marvel nineoneone fm ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/2617ba46ca0af0c8485b12ba3e64b939/dad1e513b979112a-29/s540x810/22abc3c2c8379c8d5c1d75db427109816f2f5caa.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1886,7 +1912,7 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 primary canondiv au yescros canonuntildawn magical tlou dragonage baldursgate bridgerton chuck historical magical lost merlin nineoneone  firefly untildawn marvel magical tlou twd doctorwho modern fallout fm ff>
+    <filter color6 super canondiv au yescros canonuntildawn magical tlou dragonage baldursgate bridgerton chuck historical magical lost merlin nineoneone  firefly untildawn marvel magical tlou twd doctorwho modern fallout fm ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/6c9aee00648d3edabef160679a461ae3/f9954e58cf5bac61-ed/s540x810/f1f8a5ae4084c9c8c5e648461dbe793dcacccfbc.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1911,27 +1937,6 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
 
     
     
-       <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 primary canondiv au yescros canondoctorwho tlou   chuck historical magical lost merlin  firefly  marvel magical tlou twd doctorwho modern fallout fm ff>
-      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
-      <muse><img src="https://64.media.tumblr.com/00d0f0b25b9c370c1637d16938fdaae7/f9954e58cf5bac61-62/s540x810/ca802043f5dabf37c55083dd13dc740ed58468d0.png">
-        <!-- Muse Picture. can be a gif or static pic -->
-        <a href="https://tumblr.com/re-regeneratedanomaly"></a>
-        <!-- If you want no link delete this -->
-        <div class="name">Jenny
-          <p style="font-size:16px">Doctor's Daughter</p>
-        </div>
-        <div class="age">50+</div>
-        <div class="gender">doctor who
-          <p>canon div</p>
-        </div>
-        <div class="traits"><span>MOVED TO RE-REGENERATEDANOMALY</span></div>
-        <div class="description"><b>Wanted interactions</b>: MOVED TO RE-REGENERATEDANOMALY</a>! everyone who writes with me ever.
-          <br><b>Open to ship with:</b> see her about page.
-        </div>
-      </muse>
-    </filter>
-    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
     
     
     
