@@ -867,7 +867,15 @@ Everything you add as filter labels you have to add here. Look what you have in 
       sidebar:has(input:checked+label[for='canonsquidgame'])~section filter:not([canonsquidgame]),
       sidebar:has(input:checked+label[for='canontlou'])~section filter:not([canontlou]),
             sidebar:has(input:checked+label[for='canontwilight'])~section filter:not([canontwilight]),
-    sidebar:has(input:checked+label[for='canonFallout'])~section filter:not([canonFallout])
+    sidebar:has(input:checked+label[for='canonFallout'])~section filter:not([canonFallout]),
+    
+   sidebar:has(input:checked+label[for='human'])~section filter:not([human]),
+    sidebar:has(input:checked+label[for='creature'])~section filter:not([creature]),
+     sidebar:has(input:checked+label[for='alien'])~section filter:not([alien]),
+      sidebar:has(input:checked+label[for='elf'])~section filter:not([elf]),
+       sidebar:has(input:checked+label[for='goddess'])~section filter:not([goddess])
+    
+    
     /**no comma at the end **/
     
     {
@@ -997,6 +1005,8 @@ Everything you add as filter labels you have to add here. Look what you have in 
           
       </div>
       <!-- FILTER CATEGORY 3 ENDS HERE -->
+      
+      
       <!-- FILTER CATEGORY 4 STARTS HERE -->
       <div class="filter">
         <p>Type*:</p>
@@ -1008,14 +1018,22 @@ Everything you add as filter labels you have to add here. Look what you have in 
       </div>
       </p>
       <!-- FILTER CATEGORY 4 ENDS HERE -->
+      
+      
+      
       <!-- FILTER CATEGORY 5 STARTS HERE -->
       <div class="filter">
         <p>Open to ships*:</p>
         <div class="filter_links" id="five">
           <!-- by adding one,
-                                                                                                                                                                                                                                                             two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">--><input type="radio" id="allship" name="ship" checked><label for="allship">all</label><input type="radio" id="fm" name="ship"><label for="fm">f/m</label><input type="radio" id="ff" name="ship"><label for="ff">f/f</label><input type="radio" id="arofm"
-            name="ship"><label for="arofm">aro f/m</label><input type="radio" id="aroff" name="ship"><label for="aroff">aro f/f</label><input type="radio" id="acefm" name="ship"><label for="acefm">f/m ace</label><input type="radio" id="aceff" name="ship">
-          <label for="aceff">f/f ace</label><input type="radio" id="aroace" name="ship"><label for="aroace">aroace</label><br><br>
+                                                                                                                                                two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">-->
+                                                                                                                <input type="radio" id="allship" name="ship" checked><label for="allship">all</label>
+            <input type="radio" id="fm" name="ship"><label for="fm">f/m</label><input type="radio" id="ff" name="ship"><label for="ff">f/f</label>
+                                                                                                                                                                                               <input type="radio" id="arofm" name="ship"><label for="arofm">aro f/m</label>
+                                                                                                                                                                                               <input type="radio" id="aroff" name="ship"><label for="aroff">aro f/f</label>
+                                                                                                                                                                                               <input type="radio" id="acefm" name="ship"><label for="acefm">f/m ace</label>
+                                                                                                                                                                                               <input type="radio" id="aceff" name="ship"><label for="aceff">f/f ace</label><input type="radio" id="aroace" name="ship"><label for="aroace">aroace</label><br><br>
+                                                                                                                                                                                               
           <p style="font-size:12px">*aro and ace are meant as a spectrum, from demi to repulsed depending on the character, so 'ace f/f' could mean romantically attracted to women but sex repulsed or demi or neutral etc unlike f/f who is simply attracted to women physically and
             romantically. <br>Bi/pan characters have both f/m and f/f checked separatedly to keep this list manageable.</p>
         </div>
@@ -1051,6 +1069,28 @@ Everything you add as filter labels you have to add here. Look what you have in 
           <input type="radio" id="canonuntildawn" name="canonically"><label for="canonuntildawn">Until Dawn</label></div>
       </div>
       <!-- FILTER CATEGORY 6 ENDS HERE -->
+      
+      
+      
+      
+      <!-- FILTER CATEGORY 7 STARTS HERE -->
+      <div class="filter">
+        <p>Main verse form</p>
+        <div class="filter_links" id="five">
+          <!-- by adding one                                                                  two or three in the ID you can change the highlight color. leave it blank for the accent color. EX: <div class="filter_links" id="one">-->
+                                                                                                                <input type="radio" id="allform" name="form" checked><label for="allform">all</label>
+            <input type="radio" id="human" name="form"><label for="human">human</label>
+            <input type="radio" id="elf" name="form"><label for="elf">elf</label>
+                                                                                                                                                                                               <input type="radio" id="goddess" name="form"><label for="goddess">goddess</label>
+                                                                                                                                                                                               <input type="radio" id="alien" name="form"><label for="alien">alien</label>
+                                                                                                                                                                                               <input type="radio" id="creature" name="form"><label for="creature">creature</label>
+                                                                                                                                                                                            
+                                                                                                                                                                                             
+        </div>
+      </div>
+      <!-- FILTER CATEGORY 7 ENDS HERE -->
+      
+      
       <!-- You can add more filters just copy paste from filter category starts here to filter category ends here and paste above this text. The sidebar keeps scrolling. -->
     </div>
   </sidebar>
@@ -1062,7 +1102,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color6 super  canondiv yescros oc au   tlou finalfantasy  opla xmen dragonage baldursgate tlou marvel thehundred grishaverse ouat doctorwho  marvel dc lotr  historical modern magical fallout thepitt xmen nineoneone therookie bridgerton chuck twd firefly lost turn  fm>
+    <filter color6 super  canondiv yescros oc au human  tlou finalfantasy  opla xmen dragonage baldursgate tlou marvel thehundred grishaverse ouat doctorwho  marvel dc lotr  historical modern magical fallout thepitt xmen nineoneone therookie bridgerton chuck twd firefly lost turn  fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/cc14f10a3770d8582cd0965e24b3f322/dad1e513b979112a-1d/s540x810/63a28031e39e476ea9abf5c3962f90e988e5e308.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1087,7 +1127,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 super  canondiv yescros canonffvi squidgame  tlou finalfantasy   opla xmen dragonage baldursgate tlou  grishaverse ouat doctorwho  marvel dc lotr ff historical modern magical fallout bridgerton chuck twd firefly lost turn aroff acefm aceff arofm fm>
+    <filter color2 super  canondiv creature yescros canonffvi squidgame  tlou finalfantasy   opla xmen dragonage baldursgate tlou  grishaverse ouat doctorwho  marvel dc lotr ff historical modern magical fallout bridgerton chuck twd firefly lost turn aroff acefm aceff arofm fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/77265c2ae676886fa54ad956782cc647/f9954e58cf5bac61-19/s540x810/0550323ab9dad0d5a2ed757f2636bc8e2258a684.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1111,7 +1151,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
        <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 super canondiv au yescros canondoctorwho  historical  lost   firefly  marvel magical  twd doctorwho modern fallout fm ff>
+    <filter color2 super canondiv au yescros canondoctorwho alien  historical  lost   firefly  marvel magical  twd doctorwho modern fallout fm ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/00d0f0b25b9c370c1637d16938fdaae7/f9954e58cf5bac61-62/s540x810/ca802043f5dabf37c55083dd13dc740ed58468d0.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1136,7 +1176,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 super canondiv au yescros  tlou dragonage baldursgate bridgerton chuck historical magical lost  turn thepitt firefly therookie nineoneone xmen thepitt  marvel magical tlou twd doctorwho modern fallout fm ff>
+    <filter color2 super canondiv au yescros human tlou dragonage baldursgate nofandom canonbridgerton bridgerton opla chuck historical magical lost  turn thepitt firefly therookie nineoneone xmen thepitt  marvel magical tlou twd doctorwho modern fallout fm ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/ae2e3e28e8438de96ed81a1d1bba2921/f9954e58cf5bac61-67/s540x810/71d379fc8273c3c202bd85e987205cd9b54e1ec3.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1166,7 +1206,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
 
-    <filter color3 primary au nocros canonfallout aceff ff fm acefm fallout>
+    <filter color3 primary au nocros canonfallout human aceff ff fm acefm fallout>
       <!-- Add the filters here! Use color1,                                                                                                                color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/f1174de11461d3b14229e92dbb577840/f9954e58cf5bac61-14/s540x810/46ec4cd341cb678b6024ccb6fe760c4341fc6773.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1191,7 +1231,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 primary canontlou fm au nocros tlou>
+    <filter color3 primary canontlou fm au  human nocros tlou>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/a9de4d8519dc6c738c8a232e0a8832b7/f9954e58cf5bac61-89/s540x810/d1c1dcea066a093cd0da01e140363b6a854f920e.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1218,7 +1258,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 primary canontlou oc yescros fm ff twd thepitt therookie fallout marvel nineoneone modern tlou>
+    <filter color2 primary canontlou oc yescros human fm ff twd thepitt therookie fallout marvel nineoneone modern tlou>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/3b6ec78df4c822a46c752a771b4c17cd/f9954e58cf5bac61-82/s540x810/2e86b25c15d16dbda7b65870ebec8caa0a493ef4.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1242,7 +1282,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 primary canontlou canondiv twd yescros tlou>
+    <filter color2 primary canontlou canondiv twd human yescros tlou>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/1e5475513e259f38eb5c27edabe62962/f9954e58cf5bac61-ee/s540x810/6e97d9ef0a437792f23b0fe2eebc6ca01b9b233b.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1269,7 +1309,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color4 semiprivate tertiary test canondiv canontlou nocros tlou ff>
+    <filter color4 semiprivate tertiary test canondiv human canontlou nocros tlou ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/b239c5979b14a6ae0345bd175ee2ad6b/f9954e58cf5bac61-15/s540x810/843299bb20d27576ea39b2324686f4853d19ebd3.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1296,7 +1336,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canondoctorwho  fallout magical firefly grishaverse dragonage canondiv doctorwho historical marvel xmen twd tlou dc baldursgate yescros au fm ff modern primary>
+    <filter color2 canondoctorwho  fallout magical alien firefly grishaverse dragonage canondiv doctorwho historical marvel xmen twd tlou dc baldursgate yescros au fm ff modern primary>
       <!-- Add the filters here! Use color1,       color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/c876e7b5079ce8b92a208cef42c9591e/f9954e58cf5bac61-aa/s540x810/1ade475dd9796863e2aad620c191be3b855e64fa.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1318,7 +1358,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
        <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canontwilight twilight  ouat magical bridgerton fantasy  dragonage oc doctorwho historical marvel xmen lotr turn twd tlou dc baldursgate yescros au fm ff modern primary>
+    <filter color2 canontwilight twilight creature ouat magical bridgerton fantasy  dragonage oc doctorwho historical marvel xmen lotr turn twd tlou dc baldursgate yescros au fm ff modern primary>
       <!-- Add the filters here! Use color1,       color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/96f7223f97df57151cf4ae331dd4cc47/fc06d0a3ae77c7ad-61/s540x810/e1d009c5c951bd1f1ed6580c6e6e875cd73c5b71.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1368,7 +1408,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 xmen canondragonage   baldursgate canondiv oc yescros ff fm arofm aroff tertiary dragonage marvel  dc>
+    <filter color2 xmen canondragonage  creature baldursgate canondiv oc yescros ff fm arofm aroff tertiary dragonage marvel  dc>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/29abb9f858628703e68c6bb757c35abe/f9954e58cf5bac61-20/s540x810/75f1ddde1468d2773ffb609cbbac25d0d7c75766.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1395,7 +1435,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canondoctorwho doctorwho nocros oc fm ff modern primary>
+    <filter color3 canondoctorwho goddess doctorwho nocros oc fm ff modern primary>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/42bfdc9edca25df361791ff24bab29f7/f9954e58cf5bac61-72/s540x810/f5e57ff75d2ce4ac27b06614f6dfb36cf6bd4bd0.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1420,7 +1460,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonfallout fallout canondiv nocros fm primary>
+    <filter color3 canonfallout human fallout canondiv nocros fm primary>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/10171de8fc1c0d4fe3873c0040fc1de4/f9954e58cf5bac61-f5/s540x810/97da91f001bc0de923c27da2bcfe63a5468e97b1.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1445,7 +1485,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonfallout fallout canondiv nocros fm secondary>
+    <filter color3 canonfallout human fallout canondiv nocros fm secondary>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/c4679127b13e934fe076950d74b80005/f9954e58cf5bac61-6e/s540x810/16460d306fb4c931a4a64dfaf13eb03ed40393ce.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1469,7 +1509,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonfallout fallout au nocros fm ff primary>
+    <filter color3 canonfallout creature fallout au nocros fm ff primary>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/7d1815e80371e3275561faa0cb94ad70/f9954e58cf5bac61-72/s540x810/2588cf978bc594ec36cadf1ff5a8eefe14638cca.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1493,7 +1533,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 au secondary nocros canonfallout fallout ff fm>
+    <filter color3 au secondary human nocros canonfallout fallout ff fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/29823ef09210c2a2848608a844930770/f9954e58cf5bac61-e5/s540x810/f71c69e1a48e146379beadd377fbefc74f834491.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1514,7 +1554,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 primary canondiv nocros canonopla opla fm>
+    <filter color3 primary canondiv human nocros canonopla opla fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/8b52c8c26a511912052ac2e985ed1af4/f9954e58cf5bac61-8c/s540x810/89be42985e2d12d84a4e13c426f2ab56f9671c16.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1539,7 +1579,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 oc yescros primary  tlou finalfantasy  opla xmen dragonage baldursgate bridgerton tlou marvel twd  ouat doctorwho thepitt  marvel dc lotr ff historical  magical onepiece twd twilight fallout bridgerton chuck firefly lost turn fm>
+    <filter color2 oc yescros primary creature tlou nofandom finalfantasy  opla xmen dragonage baldursgate bridgerton tlou marvel twd  ouat doctorwho thepitt  marvel dc lotr ff historical  magical opla twd twilight fallout bridgerton chuck firefly lost turn fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/3995d575112886697492ed53d7c1e789/dad1e513b979112a-b6/s540x810/fff49103b402492a0103c85a9b09715d6f168b28.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1569,7 +1609,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 test super canondiv au yescros canonthepit thepitt bridgerton therookie modern marvel nineoneone fm ff>
+    <filter color2 test super canondiv human creature au yescros canonthepitt thepitt bridgerton therookie modern marvel nineoneone fm ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/2617ba46ca0af0c8485b12ba3e64b939/dad1e513b979112a-29/s540x810/22abc3c2c8379c8d5c1d75db427109816f2f5caa.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1594,7 +1634,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 test secondary canondiv yescros canonthepit thepitt therookie modern marvel nineoneone arofm fm acefm>
+    <filter color2 test secondary canondiv human yescros canonthepitt thepitt therookie modern marvel nineoneone arofm fm acefm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/9b2da71b6707cc42ed9d4f8c6ea51097/dad1e513b979112a-24/s540x810/e17ac89978ae8522bc560a0026ecf1845bb03058.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1620,7 +1660,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 teriary canondiv oc yescros canonsquidgame squidgame  opla xmen dragonage baldursgate  marvel twd   doctorwho  marvel dc  ff  modern magical fallout bridgerton chuck firefly   ff fm>
+    <filter color2 teriary canondiv human oc yescros canonsquidgame squidgame  opla xmen dragonage baldursgate  marvel twd   doctorwho  marvel dc  ff  modern magical fallout bridgerton chuck firefly   ff fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/19d1bf28fb4da85bdcbcde4e0f5a7362/bda79ec8005fb723-eb/s250x400/223f9a536fd4dd7b553186ac9202289e5f338615.pnj">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1644,7 +1684,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 teriary test fc canonstrangerthings strangerthings nocros>
+    <filter color3 teriary test human fm ff canonstrangerthings strangerthings nocros>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/3520902f5108481db64a83fdc5dc15dd/f9954e58cf5bac61-7a/s540x810/e7de380078cb094d08a99645852ae8b6619724f3.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1672,7 +1712,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canondragonage dragonage  oc canondiv maybecros fm primary >
+    <filter color2 canondragonage dragonage elf oc canondiv maybecros fm primary >
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/31059b1357cec2919bb1d9b729f4e0ac/f9954e58cf5bac61-67/s540x810/74dda161d832003fc71eb8b2f74e040a4ba83a5f.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1696,7 +1736,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 canondragonage dragonage oc  canondiv maybecros secondary fm >
+    <filter color2 canondragonage dragonage oc elf canondiv maybecros secondary fm >
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/ccbdb6f877f06733199ab2a229f2aa09/f9954e58cf5bac61-72/s540x810/fda06e55eb3e49501516385f5afee5db54fd991b.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1721,7 +1761,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color1 canonlost lost bridgerton turn dragonage firefly secondary canondiv modern fm historical yescros>
+    <filter color1 canonlost lost bridgerton human turn dragonage firefly secondary canondiv modern fm historical yescros>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/0416705e8515ae5e1eb571ef8d029f9a/f9954e58cf5bac61-6a/s540x810/231509a66ff12b70df370f71d62dceed59b07f9f.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1749,7 +1789,7 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonbaldursgate baldursgate nocros primary fm canondiv>
+    <filter color3 canonbaldursgate baldursgate elf nocros primary fm canondiv>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/b54bae9d6b7ac8234a64ca32a0c83cff/f9954e58cf5bac61-ab/s540x810/4615acc555fa64c1407eb94cc0840ab6baae586b.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1791,7 +1831,7 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canonmarvel marvel canondiv nocros fm dc doctorwho test secondary>
+    <filter color3 canonmarvel marvel canondiv human nocros fm dc doctorwho test secondary>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/e81658b5cb99a3c996e35dc8f7e4095a/f9954e58cf5bac61-d3/s540x810/1a11486115a4f3e44580a112bc03320c0dc5098b.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1817,7 +1857,7 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color3 canondoctorwho doctorwho nocros maybecros au  fm ff modern secondary test>
+    <filter color3 canondoctorwho doctorwho goddess nocros maybecros au  fm ff modern secondary test>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/05ab41e9dbc07d268ff308d37991072e/f9954e58cf5bac61-1d/s540x810/06e764fdaf66ae4a2a84f37cd502ecea8fe4bd2d.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1848,7 +1888,7 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color4 canonthehundred thehundred nocros fm ff canondiv secondary>
+    <filter color4 canonthehundred thehundred human nocros fm ff canondiv secondary>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/23cfe9297e0f9d418555b0895becd088/f9954e58cf5bac61-6b/s540x810/0980a13adf89a697094573b641426924eca565c9.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1880,7 +1920,7 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color4 test tertiary canondiv nocros historical canonBridgerton bridgerton fm>
+    <filter color4 test tertiary canondiv nocros human historical canonBridgerton bridgerton fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/4e98921d9c61d90262c9ab36445048b7/f9954e58cf5bac61-2a/s540x810/ce344c67442ef3f7f28cc36c4377ef77caa44c25.jpg">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1906,7 +1946,7 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color6 super canondiv au yescros canonuntildawn magical tlou dragonage baldursgate bridgerton chuck historical magical lost  nineoneone  firefly untildawn marvel magical tlou twd doctorwho modern fallout fm ff>
+    <filter color6 super canondiv au yescros creature human canonuntildawn magical tlou dragonage baldursgate bridgerton chuck historical magical lost  nineoneone  firefly untildawn marvel magical tlou twd doctorwho modern fallout fm ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/6c9aee00648d3edabef160679a461ae3/f9954e58cf5bac61-ed/s540x810/f1f8a5ae4084c9c8c5e648461dbe793dcacccfbc.png">
         <!-- Muse Picture. can be a gif or static pic -->
