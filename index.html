@@ -817,6 +817,8 @@ Everything you add as filter labels you have to add here. Look what you have in 
     sidebar:has(input:checked+label[for='Grishaverse'])~section filter:not([Grishaverse]),
     sidebar:has(input:checked+label[for='baldursgate'])~section filter:not([baldursgate]),
     sidebar:has(input:checked+label[for='strangerthings'])~section filter:not([strangerthings]),
+    sidebar:has(input:checked+label[for='btvs'])~section filter:not([btvs]),
+
     sidebar:has(input:checked+label[for='untildawn'])~section filter:not([untildawn]),
     sidebar:has(input:checked+label[for='nofandom'])~section filter:not([nofandom]),
     sidebar:has(input:checked+label[for='Fallout'])~section filter:not([Fallout]),
@@ -853,7 +855,8 @@ Everything you add as filter labels you have to add here. Look what you have in 
     sidebar:has(input:checked+label[for='canonDragonAge'])~section filter:not([canonDragonAge]),
     sidebar:has(input:checked+label[for='canonMarvel'])~section filter:not([canonMarvel]),
     
-    
+        sidebar:has(input:checked+label[for='canonbtvs'])~section filter:not([canonbtvs]),
+
  sidebar:has(input:checked+label[for='nofandom'])~section filter:not([nofandom]),
     sidebar:has(input:checked+label[for='canonopla'])~section filter:not([canonopla]),
     sidebar:has(input:checked+label[for='canonDoctorWho'])~section filter:not([canonDoctorWho]),
@@ -946,7 +949,11 @@ Everything you add as filter labels you have to add here. Look what you have in 
       <!-- FILTER CATEGORY 3 STARTS HERE -->
       <div class="filter">
         <p>Open to these fandoms:</p>
-        <div class="filter_links" id="five"><input type="radio" id="allgender" name="gender" checked><label for="allgender">all</label><input type="radio" id="baldursgate" name="gender"><label for="baldursgate">bg3</label><input type="radio" id="bridgerton" name="gender"><label for="bridgerton">bridgerton</label>
+        <div class="filter_links" id="five"><input type="radio" id="allgender" name="gender" checked><label for="allgender">all</label>
+        <input type="radio" id="baldursgate" name="gender"><label for="baldursgate">bg3</label>
+        
+        <input type="radio" id="bridgerton" name="gender"><label for="bridgerton">bridgerton</label>
+        <input type="radio" id="btvs" name="gender"><label for="btvs">btvs</label>
           <input type="radio" id="Chuck" name="gender"><label for="Chuck">Chuck</label><input type="radio" id="DoctorWho" name="gender"><label for="DoctorWho">Doctor Who</label>
           
           <input type="radio" id="DragonAge" name="gender">          <label for="DragonAge">Dragon Age</label>
@@ -1049,6 +1056,8 @@ Everything you add as filter labels you have to add here. Look what you have in 
          
         <input type="radio" id="canonbaldursgate" name="canonically"><label for="canonbaldursgate">bg3</label>
         <input type="radio" id="canonBridgerton"  name="canonically"><label for="canonBridgerton">bridgerton</label>
+                <input type="radio" id="canonbtvs" name="canonically"><label for="canonbtvs">btvs</label>
+
 
         <input type="radio" id="canonDoctorWho" name="canonically"><label for="canonDoctorWho">Doctor Who</label>
           <input type="radio" id="canonDragonAge" name="canonically"><label for="canonDragonAge">Dragon Age</label>
@@ -1131,7 +1140,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 super canondiv au yescros human tlou dragonage baldursgate nofandom canonbridgerton bridgerton opla chuck historical magical lost  turn thepitt firefly therookie nineoneone xmen thepitt  marvel magical tlou twd doctorwho modern fallout fm ff>
+    <filter color2 super canondiv au yescros human tlou dragonage baldursgate nofandom canonbridgerton bridgerton opla chuck historical btvs magical lost  turn thepitt firefly therookie nineoneone xmen thepitt  marvel magical tlou twd doctorwho modern fallout fm ff>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/ae2e3e28e8438de96ed81a1d1bba2921/f9954e58cf5bac61-67/s540x810/71d379fc8273c3c202bd85e987205cd9b54e1ec3.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1433,7 +1442,7 @@ Everything you add as filter labels you have to add here. Look what you have in 
     
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color2 oc yescros primary creature tlou nofandom finalfantasy  opla xmen dragonage baldursgate bridgerton tlou marvel twd  ouat doctorwho thepitt  marvel dc lotr ff historical  magical opla twd twilight fallout bridgerton chuck firefly lost turn fm>
+    <filter color2 oc yescros primary creature tlou btvs nofandom finalfantasy  opla xmen dragonage baldursgate bridgerton tlou marvel twd  ouat doctorwho thepitt  marvel dc lotr ff historical  magical opla twd twilight fallout bridgerton chuck firefly lost turn fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/3995d575112886697492ed53d7c1e789/dad1e513b979112a-b6/s540x810/fff49103b402492a0103c85a9b09715d6f168b28.png">
         <!-- Muse Picture. can be a gif or static pic -->
@@ -1895,6 +1904,30 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
 
 
 
+    <!-- MUSE BOX STARTS HERE / START COPY -->
+    <filter color3 test secondary canondiv nocros human modern canonbtvs btvs fm>
+      <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
+      <muse><img src="https://64.media.tumblr.com/7acbc0b5e828a72c5afba3b9873255b8/04566943bd0e7df1-d6/s540x810/1d766bcbd0ec5f37175727783110a24eb28ed850.png">
+        <!-- Muse Picture. can be a gif or static pic -->
+        <a href="https://sites.google.com/view/savingthrcw/muses/buffyverse/buffy-dawn-summers-btvs"></a>
+        <!-- If you want no link delete this -->
+        <div class="name">Buffy&Dawn
+          <p>Summers</p>
+        </div>
+        <div class="age">19+</div>
+        <div class="gender">BTVS
+          <p>canon div/au</p>
+        </div>
+        <div class="traits"><span> open only to canon, canon div. characters and oc </span></div>
+        <div class="description"><b>Wanted interactions</b>: people from the buffyverse including ocs. I don't write them before s5 and with most I default to 'after' the end of the show. No comics. See canon divergence though, especially in s6. 
+        <br><b>Open to ship with:</b>   only Spuffy (if NOT written darker than in canon and with the Divergence). I'm NOT an Angel hater. Dawn with *maybe* Connor and other boys her age.
+</div>
+      </muse>
+    </filter>
+    <!-- MUSE BOX ENDS HERE / END COPY PASTE BELOW-->
+
+
+
 
     
         <!-- MUSE BOX STARTS HERE / START COPY -->
@@ -1949,7 +1982,7 @@ wanted interactions: canon: only Sawyer, Sayid, Claire, Jack, Juliet (if they ar
       
     
     <!-- MUSE BOX STARTS HERE / START COPY -->
-    <filter color6 super  canondiv creature yescros canonffvi   tlou finalfantasy   opla xmen dragonage baldursgate tlou  grishaverse ouat doctorwho  marvel dc lotr ff historical modern magical fallout bridgerton chuck twd firefly lost turn aroff acefm aceff arofm fm>
+    <filter color6 super btvs canondiv creature yescros canonffvi   tlou finalfantasy   opla xmen dragonage baldursgate tlou  grishaverse ouat doctorwho  marvel dc lotr ff historical modern magical fallout bridgerton chuck twd firefly lost turn aroff acefm aceff arofm fm>
       <!-- Add the filters here! Use color1, color2 or color3 for custom/different accent colors -->
       <muse><img src="https://64.media.tumblr.com/77265c2ae676886fa54ad956782cc647/f9954e58cf5bac61-19/s540x810/0550323ab9dad0d5a2ed757f2636bc8e2258a684.png">
         <!-- Muse Picture. can be a gif or static pic -->
